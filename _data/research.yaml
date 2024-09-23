@@ -1,0 +1,10 @@
+papers:
+  - title: "TITLE HERE"
+    venue: VENURE HERE
+    authors:
+      - name: AUTHOR 1
+      - NAME: <b>YOUR NAME HERE</b>
+    pdf: ""
+    project: ""
+    teaser: resource/kaw.png
+    code: ""

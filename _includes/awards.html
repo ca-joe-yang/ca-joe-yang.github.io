@@ -1,0 +1,11 @@
+<div class="container">
+  <h1> Awards and Honors </h1>
+  <p></p>
+  <ul>
+    {% for award in site.data.awards.awards %}
+      <li>
+        <a href={{award.link}}>{{award.name}}</a> | {{award.venue}}, {{award.year}}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

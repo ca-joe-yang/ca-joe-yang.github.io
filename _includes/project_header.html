@@ -1,0 +1,46 @@
+<html>
+  <meta name="robots" content="index, follow">
+
+  <head>
+    <title> {{ page.title }} | {{page.my_name}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../../css/theme.css" rel="stylesheet" media="screen">
+    <link href="../../css/style.css" rel="stylesheet" media="screen">
+    <link rel="shortcut icon" type="image/x-icon" href="../../logos/favicon.ico">
+    <!-- Mathjax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+  </head>
+
+
+<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+  <div class="container">
+    <a href="../../index.html" class="navbar-brand">{{page.my_name}}</a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../index.html#research">Research</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../index.html#teaching">Teaching</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../index.html#awards">Awards</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<body data-spy="scroll">
+<div class="container">
