@@ -1,10 +1,10 @@
 papers:
   - title: "TITLE HERE"
-    venue: VENURE HERE
+    venue: ECCV 2024
     authors:
       - name: AUTHOR 1
-      - NAME: <b>YOUR NAME HERE</b>
+      - NAME: <b>Chiao-An Yang</b>
     pdf: ""
-    project: ""
+    project: projects/index.html
     teaser: resource/kaw.png
     code: ""

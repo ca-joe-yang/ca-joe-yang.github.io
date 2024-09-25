@@ -5,7 +5,9 @@ website template
 Install Jekyll https://jekyllrb.com/
 
 Run
-```jekyll build```
+```bash
+jekyll build
+```
 
 Look at the generated website in `_site`
 
@@ -21,4 +23,9 @@ To move the site to Github, simply copy all the stuff in `_site`.
 
 
 To change the color theme, replace the `theme.css` generated from https://themestr.app/
+
+## Build locally
+```bash
+jekyll serve -l -H localhost
+```
 
