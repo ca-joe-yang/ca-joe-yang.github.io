@@ -4,11 +4,6 @@ gscholar: "https://scholar.google.com/citations?user=f1fIHBYAAAAJ&hl=zh-TW&oi=sr
 github: "https://github.com/ca-joe-yang"
 orcid: "https://orcid.org/my-orcid?orcid=0000-0003-1947-1331"
 email: "yang2300@purdue.edu"
-bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-
-# <!-- <a href="https://scholar.google.com/citations?user=f1fIHBYAAAAJ&hl=zh-TW&oi=sra">
-#             <img src="logos/scholar.svg" width="48" height="48"></a>&nbsp &nbsp &nbsp
-#           <a href="https://github.com/ca-joe-yang">
-#             <img src="logos/github.svg" width="48" height="48"></a> -->
+bio: <p>I am a third-year PhD student in Purdue University studying for a computer science degree. My advisor is  Prof. <a href="https://raymond-yeh.com/">Raymond A. Yeh</a>.</p> <p>I received my Bachelor's and Master's degree, advised by Prof. <a href="https://scholar.google.com/citations?user=uSS3FwQAAAAJ&hl=zh-TW">Yung-Yu Chuang</a>, in National Taiwan University. I later worked as Research Assistant for Prof. <a href="https://vllab.ee.ntu.edu.tw/ycwang.html">Yu-Chiang Frank Wang</a> in <a href="https://vllab.ee.ntu.edu.tw/">VLLab</a> for two years</p>.
+# My research interest is machine learning,  especially computer vision, equivariant, and machine learning for scientific discovery. I am working with Professor Raymond A. Yeh.
+# Please feel free to send me an anonymous message by clicking the box I've included below.

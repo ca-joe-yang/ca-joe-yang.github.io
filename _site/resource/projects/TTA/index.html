@@ -1,0 +1,159 @@
+<html>
+  <meta name="robots" content="index, follow">
+
+  <head>
+    <title> Deep Nets </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="../../../css/bootstrap.css" rel="stylesheet" media="screen">
+    <!-- <link href="../../../css/theme.css" rel="stylesheet" media="screen"> -->
+    <link href="../../../css/style.css" rel="stylesheet" media="screen">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../logos/favicon.ico">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58251259-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-58251259-1');
+  </script>
+
+
+    <!-- Mathjax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+  </head>
+
+
+<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+  <div class="container">
+    <a href="../../../index.html" class="navbar-brand">Chiao-An Yang</a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../../../index.html#research">Research</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="../../index.html#people">People</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../index.html#teaching">Teaching</a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="../../index.html#awards">Awards</a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<body data-spy="scroll">
+<div class="container">
+
+  <div class="container">
+    <h1>Total Variation Optimization Layers for Computer Vision</h1>
+    <p>
+      <a href="https://raymond-yeh.com">Raymond A. Yeh</a><sup>1</sup>&nbsp;&nbsp;
+      <a href="https://sites.google.com/view/yuantinghu">Yuan-Ting Hu</a>&nbsp;&nbsp;
+      <a href="https://jason718.github.io/">Zhongzheng Ren</a>&nbsp;&nbsp;
+      <a href="https://www.alexander-schwing.de/">Alexander G. Schwing</a>&nbsp;&nbsp;
+    </p>
+
+    <p>
+        <a href="https://www.ttic.edu/">Toyota Technological Institute at Chicago</a><sup>1</sup>&nbsp;&nbsp;
+        <a href="http://illinois.edu/">University of Illinois Urbana-Champaign</a>&nbsp;&nbsp;
+    </p>
+    <div class="text-center">
+        <img class="img-responsive img-rounded center-block" src="img/process.png" style="width: 500px">
+    </div>
+
+    <h2>Abstract</h2>
+    <p>
+        Optimization within a layer of a deep-net has emerged as a new direction for deep-net layer design. However, there are two main challenges when applying these layers to com- puter vision tasks: (a) which optimization problem within a layer is useful?; (b) how to ensure that computation within a layer remains efficient? To study question (a), in this work, we propose total variation (TV) minimization as a layer for computer vision. Motivated by the success of total variation in image processing, we hypothesize that TV as a layer pro- vides useful inductive bias for deep-nets too. We study this hypothesis on five computer vision tasks: image classifica- tion, weakly supervised object localization, edge-preserving smoothing, edge detection, and image denoising, improving over existing baselines. To achieve these results we had to address question (b): we developed a GPU-based projected- Newton method which is 37× faster than existing solutions
+    </p>
+
+    <h2>Materials</h2>
+    <div class="row">
+        <div class="col-4">
+            <div class="text-center">
+                <a href="https://arxiv.org/pdf/2204.03643.pdf">
+                    <img class="img-responsive img-rounded center-block" src="img/paper_thumb.jpg" style="height:300px">
+                </a>
+                <br>
+                <a href="https://arxiv.org/pdf/2204.03643.pdf">[Paper]</a>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="text-center">
+                <a href="poster.pdf">
+                    <img class="img-responsive img-rounded center-block" src="img/poster_thumb.png" style="height:300px">
+                </a>
+                <br>
+                <a href="poster.pdf">[Poster]</a>
+            </div>
+        </div>
+    </div>
+
+    <h2>Code</h2>
+    <div class="text-center">
+        <a href="https://github.com/raymondyeh07/tv_layers_for_cv">
+            <img class="img-responsive img-rounded center-block" src="../../logos/github_logo.png" style="width: 330px">
+        </a>
+        <br>
+        <a href="https://github.com/raymondyeh07/tv_layers_for_cv">[GitHub]</a>
+    </div>
+
+    <h2>Presentation</h2>
+    <div class=text-center>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/N-CR5HeciK0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
+    <h2>Citation</h2>
+    <div class="bg-light">
+<pre>
+@inproceedings{YehCVPR2022,
+               author = {R.~A. Yeh and Y.-T. Hu and Z. Ren and A.~G. Schwing},
+               title = {Total Variation Optimization Layers for Computer Vision},
+               booktitle = {Proc. CVPR},
+               year = {2022},
+}
+</pre>
+    </div>
+<br>
+</div>
+
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- From https://codepen.io/JacobLett/pen/QqOmZj-->
+    <script>
+    $(document).ready(function() {
+        $('[data-toggle="collapse"]').click(function() {
+          $(this).toggleClass( "active" );
+          if ($(this).hasClass("active")) {
+            $(this).text("Collapse");
+          } else {
+            $(this).text("Show all");
+          }
+        });
+    });
+    </script>
+
+</html>
+
+

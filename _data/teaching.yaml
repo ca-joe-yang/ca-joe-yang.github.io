@@ -1,4 +1,6 @@
 schools:
-  - name: Purdue University (Teaching Assistant)
+  - name: Purdue University
     courses:
-      - name: "Fall 2023: Intro. to AI."
+      - name: Teaching Assistant - CS59300CVD Computer Vision With Deep Learning (Fall 2024)
+      - name: Teaching Assistant - CS47100 Introduction to Artificial Intelligence (Spring 2024)
+      - name: Teaching Assistant - CS47100 Introduction to Artificial Intelligence (Fall 2023)

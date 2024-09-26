@@ -68,14 +68,23 @@
           <b class="text-danger">{{paper.is_talk}}</b>
         {% endif %}
         <br>
-        {% if paper.pdf %}
-          <a href="{{paper.pdf}}" class="btn btn-primary mr-1 mt-2" role="button">PDF</a>
+        {% if paper.paper %}
+          <a href="{{paper.paper}}" class="btn btn-primary mr-1 mt-2" role="button">Paper</a>
         {% endif %}
         {% if paper.project %}
           <a href="{{paper.project}}" class="btn btn-primary mr-1 mt-2" role="button">Project</a>
         {% endif %}
         {% if paper.code %}
           <a href="{{paper.code}}" class="btn btn-primary mt-2" role="button">Code</a>
+        {% endif %}
+        {% if paper.video %}
+          <a href="{{paper.video}}" class="btn btn-primary mt-2" role="button">Video</a>
+        {% endif %}
+        {% if paper.slide %}
+          <a href="{{paper.slide}}" class="btn btn-primary mt-2" role="button">Slide</a>
+        {% endif %}
+        {% if paper.poster %}
+          <a href="{{paper.poster}}" class="btn btn-primary mt-2" role="button">Poster</a>
         {% endif %}
         </p>
       </div>
