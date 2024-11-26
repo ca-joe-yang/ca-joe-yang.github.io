@@ -1,6 +1,6 @@
 papers:
   - title: "Dynamic Multi-Object 3D Grounding with Language Informed Spatial Attention"
-    venue: NeuIPS 2024
+    venue: NeurIPS 2024
     authors:
       - name: Haomeng Zheng
       - name: <b>Chiao-An Yang</b>
