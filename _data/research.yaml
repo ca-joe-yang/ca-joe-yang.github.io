@@ -5,11 +5,11 @@ papers:
       - name: Haomeng Zheng
       - name: <b>Chiao-An Yang</b>
       - name: Raymond A. Yeh
-    # video: https://youtu.be/GPGoD9rwoBg
-    # pdf: ""
-    # project: ""
+    video: https://www.youtube.com/watch?v=U_2FcJqpJo0&feature=youtu.be
+    pdf: https://arxiv.org/pdf/2410.22306
+    project: https://haomengz.github.io/dlisa/
     teaser: resource/projects/LISA/teaser.png
-    # code: https://github.com/ca-joe-yang/discard-in-subsampling
+    code: https://github.com/ca-joe-yang/discard-in-subsampling
   - title: "Deep Nets with Subsampling Layers Unwittingly Discard Useful Activations at Test-Time"
     venue: ECCV 2024
     authors:
