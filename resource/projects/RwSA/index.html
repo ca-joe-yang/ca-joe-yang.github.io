@@ -3,7 +3,7 @@
 
 <html>
 <head>
-    <title>Subsampling</title>
+    <title>Regression without Soft-Argmax</title>
     <meta property="og:image" content="resources/teaser.jpeg"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>    
@@ -21,14 +21,14 @@
 <body>
 <br>
     <center>
-    <span style="font-size:36px">Multi-concept Model Immunization through Differentiable Model Merging</span>
+    <span style="font-size:36px">Heatmap Regression without Soft-Argmax for Facial Landmark Detection</span>
     <table align=center width=600px>
         <br>
         <table align="center" width="450px">
             <tbody><tr>
                     <td align="center" width="175px">
               <center>
-                <span style="font-size:25px"><a href="https://amberyzheng.github.io/">Amber Yijia Zheng</a></span>
+                <span style="font-size:25px"><a href="">Chiao-An Yang</a></span>
                 </center>
                 </td>
                     <td align="center" width="175px">
@@ -66,7 +66,7 @@
                 </td>
                     <td align="center" width="400px">
               <center>
-                    <span style="font-size:20px">AAAI 2025</span>
+                    <span style="font-size:20px">ICCV 2025</span>
                 </center>
                 </td>
                     <td align="center" width="100px">
@@ -83,13 +83,13 @@
 
     <center>
         <div class="buttons" style="margin-bottom: 20px;">
-            <a class="btn btn-light" role="button" href="https://github.com/amberyzheng/MIMA" style="margin-right: 20px; font-size: 18px; padding: 10px 20px;">
+            <a class="btn btn-light" role="button" href="." style="margin-right: 20px; font-size: 18px; padding: 10px 20px;">
                 <svg style="visibility:hidden;width:0px;height:24px;margin-left:-12px;margin-right:12px" width="0px" height="24px" viewBox="0 0 375 531">
                     <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874"/>
                 </svg>
                 Code
             </a>
-            <a class="btn btn-light" role="button" href="https://arxiv.org/abs/2412.15320" style="margin-left: 20px; font-size: 18px; padding: 10px 20px;">
+            <a class="btn btn-light" role="button" href="." style="margin-left: 20px; font-size: 18px; padding: 10px 20px;">
                 <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z"></path>
                 </svg>Paper
@@ -102,11 +102,15 @@
     <!-- <center><img src="assets/teaser.jpg" alt="pipeline" width="800"></center> -->
     
     <center><h1>Abstract</h></center>
-            Model immunization is an emerging direction that aims to mitigate the potential risk of misuse associated with open-sourced models and advancing adaptation methods. The idea is to make the released models' weights difficult to fine-tune on certain harmful applications, hence the name <em>immunized</em>. 
-            Recent work on model immunization focuses on the <em>single-concept</em> setting. However, in real-world situations, models need to be immunized against multiple concepts. To address this gap, we propose an immunization algorithm that, simultaneously, learns a single “difficult initialization” for adaptation methods over <em>a set of concepts</em>. 
-            We achieve this by incorporating a differentiable merging layer that combines a set of model weights adapted over multiple concepts. In our experiments, we demonstrate the effectiveness of multi-concept immunization by generalizing prior work's experiment setup of re-learning and personalization adaptation to multiple concepts.
-    
-    
+        Facial landmark detection is an important task in computer vision with numerous applications, 
+        such as head pose estimation, expression analysis, face swapping, etc.
+        Heatmap regression-based methods have been widely used to achieve state-of-the-art results in this task. 
+        These methods involve computing the argmax over the heatmaps to predict a landmark. Since argmax is not differentiable, 
+        these methods use a differentiable approximation, Soft-argmax, to enable end-to-end training on deep-nets. 
+        In this work, we revisit this long-standing choice of using Soft-argmax and demonstrate that it is not the only way to achieve strong performance. 
+        Instead, we propose an alternative training objective based on the classic structured prediction framework. 
+        Empirically, our method achieves state-of-the-art performance on three facial landmark benchmarks (WFLW, COFW, and 300W), 
+        converging $2.2\times$ faster during training while maintaining better/competitive accuracy. 
     <p></p>
     <center><h1>Method</h></center>
 
@@ -120,7 +124,7 @@
         </div>
     </div>  
     
-    <p>MIMA is formulated as a bi-level optimization program. The objective is defined as
+    <!-- <p>MIMA is formulated as a bi-level optimization program. The objective is defined as
         \[
         \underbrace{\max_{\theta \in \mathcal{S}^u} \sum_{n=1}^{|C|} L(\mathbf{x}^u_{[n]}, \mathbf{c}_{[n]}; \text{Merge}(\{\theta'_{[n]}\}))}_{\text{upper-level task}},
         \]
@@ -144,7 +148,7 @@
         \end{cases}
         \]
 
-    </p>
+    </p> -->
 
     <!-- <center><h1>Presentation</h></center>
         <div class=text-center>
@@ -155,11 +159,11 @@
 
 <h1>Citation</h1>
 <code>
-    @inproceedings{yang2024subsampling, <br>
-        &nbsp;title={Deep Nets with Subsampling Layers Unwittingly Discard Useful Activations at Test-Time}, <br>
-        &nbsp;author={Yang, Chiao-An, Liu, Ziwei, and Yeh, Raymond A},<br>
-        &nbsp;booktitle={Proc. ECCV},<br>
-        &nbsp;year={2024}<br>
+    @inproceedings{yang2025regression, <br>
+        &nbsp;title={Heatmap Regression without Soft-Argmax for Facial Landmark Detection}, <br>
+        &nbsp;author={Yang, Chiao-An and Yeh, Raymond A},<br>
+        &nbsp;booktitle={Proc. ICCV},<br>
+        &nbsp;year={2025}<br>
 }</code>
 </body>
 </html>

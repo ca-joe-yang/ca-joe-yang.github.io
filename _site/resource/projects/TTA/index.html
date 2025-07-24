@@ -1,159 +1,165 @@
+<!DOCTYPE html>
+
+
 <html>
-  <meta name="robots" content="index, follow">
-
-  <head>
-    <title> Deep Nets </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="../../../css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="../../../css/theme.css" rel="stylesheet" media="screen">
-    <link href="../../../css/style.css" rel="stylesheet" media="screen">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../logos/favicon.ico">
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58251259-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-58251259-1');
-  </script>
-
-
-    <!-- Mathjax -->
+<head>
+    <title>Subsampling</title>
+    <meta property="og:image" content="resources/teaser.jpeg"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" href="../../../css/amber.css">
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
     <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-    </script>
-    <script type="text/javascript"
-      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
-
-  </head>
-
-
-<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
-  <div class="container">
-    <a href="../../../index.html" class="navbar-brand">Chiao-An Yang</a>
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="nav navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="../../../index.html#research">Research</a>
-        </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="../../index.html#people">People</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../../index.html#teaching">Teaching</a>
-        </li> -->
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="../../index.html#awards">Awards</a>
-        </li> -->
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<body data-spy="scroll">
-<div class="container">
-
-  <div class="container">
-    <h1>Total Variation Optimization Layers for Computer Vision</h1>
-    <p>
-      <a href="https://raymond-yeh.com">Raymond A. Yeh</a><sup>1</sup>&nbsp;&nbsp;
-      <a href="https://sites.google.com/view/yuantinghu">Yuan-Ting Hu</a>&nbsp;&nbsp;
-      <a href="https://jason718.github.io/">Zhongzheng Ren</a>&nbsp;&nbsp;
-      <a href="https://www.alexander-schwing.de/">Alexander G. Schwing</a>&nbsp;&nbsp;
-    </p>
-
-    <p>
-        <a href="https://www.ttic.edu/">Toyota Technological Institute at Chicago</a><sup>1</sup>&nbsp;&nbsp;
-        <a href="http://illinois.edu/">University of Illinois Urbana-Champaign</a>&nbsp;&nbsp;
-    </p>
-    <div class="text-center">
-        <img class="img-responsive img-rounded center-block" src="img/process.png" style="width: 500px">
-    </div>
-
-    <h2>Abstract</h2>
-    <p>
-        Optimization within a layer of a deep-net has emerged as a new direction for deep-net layer design. However, there are two main challenges when applying these layers to com- puter vision tasks: (a) which optimization problem within a layer is useful?; (b) how to ensure that computation within a layer remains efficient? To study question (a), in this work, we propose total variation (TV) minimization as a layer for computer vision. Motivated by the success of total variation in image processing, we hypothesize that TV as a layer pro- vides useful inductive bias for deep-nets too. We study this hypothesis on five computer vision tasks: image classifica- tion, weakly supervised object localization, edge-preserving smoothing, edge detection, and image denoising, improving over existing baselines. To achieve these results we had to address question (b): we developed a GPU-based projected- Newton method which is 37× faster than existing solutions
-    </p>
-
-    <h2>Materials</h2>
-    <div class="row">
-        <div class="col-4">
-            <div class="text-center">
-                <a href="https://arxiv.org/pdf/2204.03643.pdf">
-                    <img class="img-responsive img-rounded center-block" src="img/paper_thumb.jpg" style="height:300px">
-                </a>
-                <br>
-                <a href="https://arxiv.org/pdf/2204.03643.pdf">[Paper]</a>
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="text-center">
-                <a href="poster.pdf">
-                    <img class="img-responsive img-rounded center-block" src="img/poster_thumb.png" style="height:300px">
-                </a>
-                <br>
-                <a href="poster.pdf">[Poster]</a>
-            </div>
-        </div>
-    </div>
-
-    <h2>Code</h2>
-    <div class="text-center">
-        <a href="https://github.com/raymondyeh07/tv_layers_for_cv">
-            <img class="img-responsive img-rounded center-block" src="../../logos/github_logo.png" style="width: 330px">
-        </a>
-        <br>
-        <a href="https://github.com/raymondyeh07/tv_layers_for_cv">[GitHub]</a>
-    </div>
-
-    <h2>Presentation</h2>
-    <div class=text-center>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/N-CR5HeciK0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-
-    <h2>Citation</h2>
-    <div class="bg-light">
-<pre>
-@inproceedings{YehCVPR2022,
-               author = {R.~A. Yeh and Y.-T. Hu and Z. Ren and A.~G. Schwing},
-               title = {Total Variation Optimization Layers for Computer Vision},
-               booktitle = {Proc. CVPR},
-               year = {2022},
-}
-</pre>
-    </div>
-<br>
-</div>
-
-    </body>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <!-- From https://codepen.io/JacobLett/pen/QqOmZj-->
-    <script>
-    $(document).ready(function() {
-        $('[data-toggle="collapse"]').click(function() {
-          $(this).toggleClass( "active" );
-          if ($(this).hasClass("active")) {
-            $(this).text("Collapse");
-          } else {
-            $(this).text("Show all");
-          }
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
         });
-    });
     </script>
+</head>
 
+<body>
+<br>
+    <center>
+    <span style="font-size:36px">Multi-concept Model Immunization through Differentiable Model Merging</span>
+    <table align=center width=600px>
+        <br>
+        <table align="center" width="450px">
+            <tbody><tr>
+                    <td align="center" width="175px">
+              <center>
+                <span style="font-size:25px"><a href="https://amberyzheng.github.io/">Amber Yijia Zheng</a></span>
+                </center>
+                </td>
+                    <td align="center" width="175px">
+              <center>
+                <span style="font-size:25px"><a href="https://raymond-yeh.com/">Raymond A. Yeh</a></span>
+                </center>
+                </td>
+            </tr>
+        </tbody></table>
+        <table align="center" width="700px">
+            <tbody><tr>
+                    <td align="center" width="100px">
+              <center>
+                    <span style="font-size:20px"></span>
+                </center>
+                </td>
+                    <td align="center" width="400px">
+              <center>
+                    <span style="font-size:20px">Purdue University</span>
+                </center>
+                </td>
+                    <td align="center" width="100px">
+              <center>
+                    <span style="font-size:20px"></span>
+                </center>
+                </td>
+        </tr></tbody></table>
+
+        <table align="center" width="700px">
+            <tbody><tr>
+                    <td align="center" width="100px">
+              <center>
+                    <span style="font-size:25px"></span>
+                </center>
+                </td>
+                    <td align="center" width="400px">
+              <center>
+                    <span style="font-size:20px">AAAI 2025</span>
+                </center>
+                </td>
+                    <td align="center" width="100px">
+              <center>
+                    <span style="font-size:25px"></span>
+                </center>
+                </td>
+        </tr></tbody></table>
+        <br>
+
+    </table>
+    </center>
+
+
+    <center>
+        <div class="buttons" style="margin-bottom: 20px;">
+            <a class="btn btn-light" role="button" href="https://github.com/amberyzheng/MIMA" style="margin-right: 20px; font-size: 18px; padding: 10px 20px;">
+                <svg style="visibility:hidden;width:0px;height:24px;margin-left:-12px;margin-right:12px" width="0px" height="24px" viewBox="0 0 375 531">
+                    <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874"/>
+                </svg>
+                Code
+            </a>
+            <a class="btn btn-light" role="button" href="https://arxiv.org/abs/2412.15320" style="margin-left: 20px; font-size: 18px; padding: 10px 20px;">
+                <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z"></path>
+                </svg>Paper
+            </a>
+        </div>
+    </center>
+    
+
+
+    <!-- <center><img src="assets/teaser.jpg" alt="pipeline" width="800"></center> -->
+    
+    <center><h1>Abstract</h></center>
+            Model immunization is an emerging direction that aims to mitigate the potential risk of misuse associated with open-sourced models and advancing adaptation methods. The idea is to make the released models' weights difficult to fine-tune on certain harmful applications, hence the name <em>immunized</em>. 
+            Recent work on model immunization focuses on the <em>single-concept</em> setting. However, in real-world situations, models need to be immunized against multiple concepts. To address this gap, we propose an immunization algorithm that, simultaneously, learns a single “difficult initialization” for adaptation methods over <em>a set of concepts</em>. 
+            We achieve this by incorporating a differentiable merging layer that combines a set of model weights adapted over multiple concepts. In our experiments, we demonstrate the effectiveness of multi-concept immunization by generalizing prior work's experiment setup of re-learning and personalization adaptation to multiple concepts.
+    
+    
+    <p></p>
+    <center><h1>Method</h></center>
+
+
+    <div class="container" style="max-width: 1200px;">
+        <div class="row teaser">
+            <div class="col-md-12">
+                <center><img src="assets/pipeline.png" style="width: 100%;"/></center>
+                <h6 class="caption"></h6>
+            </div>
+        </div>
+    </div>  
+    
+    <p>MIMA is formulated as a bi-level optimization program. The objective is defined as
+        \[
+        \underbrace{\max_{\theta \in \mathcal{S}^u} \sum_{n=1}^{|C|} L(\mathbf{x}^u_{[n]}, \mathbf{c}_{[n]}; \text{Merge}(\{\theta'_{[n]}\}))}_{\text{upper-level task}},
+        \]
+        \[
+        \text{s.t.} \quad 
+        \underbrace{\theta'_{[n]} \triangleq \arg\min_{\theta \in \mathcal{S}^l} L(\mathbf{x}^l_{[n]}, \mathbf{c}_{[n]}; \theta) \quad \forall n}_{\text{multiple lower-level tasks}}.
+        \]
+        For the lower-level, we unroll loss <span>\(L\)</span> for the copied weights of each concept. 
+        Next, we combine the individual weights <span>\(\theta'_{[n]}\)</span> via our proposed 
+        <code>Merge</code> layer defined in 
+        the Equation below.
+        For the upper-level, we maximize the diffusion loss 
+        <span>\(L\)</span> with respect to the parameters <span>\(\theta\)</span> by backpropagating through <span>\(\theta'\)</span>.
+
+        \[
+        \theta' \triangleq \text{Merge}\left(\{ \theta'_{[n]} \}_{n=1}^N \right) 
+        \triangleq 
+        \begin{cases} 
+        \varphi^\star\left(\{\theta'_{[n]} \mid \in \mathcal{W} \}\right), & \text{if} \ \theta'_{[n]} \in \mathcal{W} \\ 
+        \frac{1}{N} \sum_{n=1}^N \theta'_{[n]}, & \text{if} \ \theta'_{[n]} \notin \mathcal{W}
+        \end{cases}
+        \]
+
+    </p>
+
+    <!-- <center><h1>Presentation</h></center>
+        <div class=text-center>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TkQ6kkEI9rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div> -->
+    
+    
+
+<h1>Citation</h1>
+<code>
+    @inproceedings{yang2024subsampling, <br>
+        &nbsp;title={Deep Nets with Subsampling Layers Unwittingly Discard Useful Activations at Test-Time}, <br>
+        &nbsp;author={Yang, Chiao-An, Liu, Ziwei, and Yeh, Raymond A},<br>
+        &nbsp;booktitle={Proc. ECCV},<br>
+        &nbsp;year={2024}<br>
+}</code>
+</body>
 </html>
-
-

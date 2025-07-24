@@ -1,4 +1,14 @@
 papers:
+  - title: "Heatmap Regression without Soft-Argmax for Facial Landmark Detection"
+    venue: ICCV 2025
+    authors:
+      - name: <b>Chiao-An Yang</b>
+      - name: Raymond A. Yeh
+    # video: https://www.youtube.com/watch?v=U_2FcJqpJo0&feature=youtu.be
+    # pdf: https://arxiv.org/pdf/2410.22306
+    project: resource/projects/RwSA
+    teaser: resource/projects/RwSA/assets
+    # code: https://github.com/ca-joe-yang/discard-in-subsampling
   - title: "Dynamic Multi-Object 3D Grounding with Language Informed Spatial Attention"
     venue: NeurIPS 2024
     authors:
@@ -18,7 +28,7 @@ papers:
       - name: Raymond A. Yeh
     video: https://youtu.be/GPGoD9rwoBg
     # pdf: ""
-    # project: resource/projects/TTA/index.html
+    project: resource/projects/TTA
     teaser: resource/projects/TTA/teaser.png
     code: https://github.com/ca-joe-yang/discard-in-subsampling
   - title: "Learning to Obstruct Few-Shot Image Classification over Restricted Classes"
