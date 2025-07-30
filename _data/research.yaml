@@ -7,7 +7,7 @@ papers:
     code: https://github.com/ca-joe-yang/regression-without-softarg
     teaser: resource/projects/RwSA/assets/demo.gif
     # pdf: https://arxiv.org/pdf/2410.22306
-    project: resource/projects/RwSA
+    project: resource/projects/RwSA/index.html
   - title: "Toward Long-Tailed Online Anomaly Detection through Class-Agnostic Concepts"
     venue: ICCV 2025
     authors:
@@ -17,7 +17,7 @@ papers:
     # code: https://github.com/ca-joe-yang/regression-without-softarg
     teaser: resource/projects/LTOAD/assets/teaser.png
     # pdf: https://arxiv.org/pdf/2410.22306
-    project: resource/projects/LTOAD
+    project: resource/projects/LTOAD/index.html
     # code: https://github.com/ca-joe-yang/discard-in-subsampling
   - title: "Local Scale Equivariance with Deep Equilibrium Canonicalizer in the Latent Space"
     venue: ICCV 2025
