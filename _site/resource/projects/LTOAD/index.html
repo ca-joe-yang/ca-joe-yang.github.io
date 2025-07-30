@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <title>Long-tailed Online AD</title>
+    <link rel="icon" href="https://www.merl.com/images/favicon.ico" type="image/x-icon">
+    <!-- <meta property="og:image" content="resources/teaser.jpeg"/> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" href="../../../css/merl.css">
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+        });
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+
+<body>
+  <center>
+    <span class="title" style="font-size:40px">Toward Long-Tailed Online Anomaly Detection through Class-Agnostic Concepts</span>
+    <table align=center width=600px>
+      <br>
+      <table align="center" width="700px">
+        <tbody>
+          <tr>
+            <td align="center" width="175px">
+              <center>
+                <span style="font-size:25px"><a href="https://ca-joe-yang.github.io/">Chiao-An Yang</a><sup>1</sup></span>
+              </center>
+            </td>
+            <td align="center" width="175px">
+              <center>
+                <span style="font-size:25px"><a href="https://www.merl.com/people/kpeng">Kuan-Chuan Peng</a><sup>2</sup></span>
+              </center>
+            </td>
+            <td align="center" width="175px">
+              <center>
+                <span style="font-size:25px"><a href="https://raymond-yeh.com/">Raymond A. Yeh</a><sup>1</sup></span>
+              </center>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table align="center" width="1000px">
+        <tbody>
+          <tr>
+            <td align="center" width="300px">
+              <span style="font-size:20px"><sup>1</sup>Purdue University, Department of Computer Science</span>
+            </td>
+            <td align="center" width="300px">
+              <span style="font-size:20px"><sup>2</sup>Mitsubishi Electric Research Laboratories</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <table align="center" width="700px">
+        <tbody>
+          <tr>
+            <td align="center" width="400px">
+              <span style="font-size:36px">ICCV 2025</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    </table>
+  </center>
+
+  <div class="button-group">
+    <a href="https://zenodo.org/records/16283853" target="_blank" class="btn zenodo-btn" aria-label="Zenodo Record">
+      <i class="fas fa-database"></i> Zenodo
+    </a>
+
+    <a href="https://arxiv.org/abs/2507.16946" target="_blank" class="btn arxiv-btn" aria-label="arXiv Paper">
+      <i class="fas fa-file-alt"></i> arXiv
+    </a>
+  </div>
+
+  <section>
+    <h3>Abstract</h3>
+    <p>
+      
+    </p>
+  </section>
+
+  <section class="figure-block">
+    <div class="figure-image-wrapper">
+      <img src="assets/teaser.png" alt="Teaser" id="teaser"/>
+    </div>
+    <p class="figure-caption">
+      <!-- Figure 1. -->
+    </p>
+  </section>
+
+  <!-- <section>
+    <h3>Presentation</h3>
+    <div class="video-container">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/GPGoD9rwoBg"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section> -->
+  
+
+  <!-- <section>
+      <h3>Approach</h3>
+      <p>
+        Let $\mathbf{X} \in \mathbb{R}^{3 \times H \times W}$ to be an input facial image labeled with $N$ landmarks $\mathbf{y} = [\mathbf{y}_1, \mathbf{y}_2, \cdots, \mathbf{y}_N]$, 
+        where each $\mathbf{y}_n$ represents the pixel location $(u,v) \in \{0, \dots, H-1\}\times \{0, \dots, W-1\}$ of the landmark, i.e., $\mathbf{y} \in \mathbb{R}^{N \times 2}$. 
+        The task of landmark detection is to learn a model, parameterized by $\theta$, that predicts landmark $\hat{\mathbf{y}}$ given the input face image $\mathbf{X}$.  
+      </p>
+      <p>
+        In heatmap regression methods, given an input, the model outputs $N$ heatmap $\hat{\mathbf{H}} = [\hat{\mathbf{H}}_1, \dots, \hat{\mathbf{H}}_N] \in \mathbb{R}^{N\times H \times W}$ 
+        where each heatmap $\hat{\mathbf{H}}_n$ represents a score of each pixel being a landmark.
+        They are often trained by minimizing the distance between a soft approximation of the landmark coodinates $\tilde{\mathbf{y}}_n$ and the ground truth $\mathbf{y}_n$,
+        \begin{align}
+        \sum_n \|\tilde{\mathbf{y}}_n - \mathbf{y}_n\|_2^2.
+        \end{align}
+        where the $\tilde y_n$ is approximated from the heatmap $\hat{\mathbf{H}}_n$ using $\tt Soft\text{-}argmax$,
+        \begin{align}
+        \tilde{\mathbf{y}}_n = {\tt Soft\text{-}argmax}(\hat{\mathbf{H}}_n) \triangleq \sum_{\mathbf{y}'} \mathbf{y}' \cdot \texttt{Softmax}(\hat{\mathbf{H}}_n)[\mathbf{y}'],
+        \end{align}
+      </p>
+      <p>
+        Inspired by the well-studied structure prediction research, we propose the following loss to replace the $\tt Soft\text{-}argmax$ approximation in heatmap regression methods,
+        \begin{align}
+        \epsilon \ln \left(\sum_{\hat{\mathbf{y}}_n}  \exp \frac{\Delta(\mathbf{y}_n, \hat{\mathbf{y}}_n) + F_n(\hat{\mathbf{y}}_n, \mathbf{X}, \theta)}{\epsilon}\right) - F_n(\mathbf{y}_n, \mathbf{X}, \theta).
+        \end{align}
+        Here we define $F_n(\mathbf{y}_n,\mathbf{X};\theta)$ as the scoring function of each possible coordinates for each landmark and $\Delta$ is an margin function of choice, e.g. $\ell_1$, $\ell_2$.
+      </p>
+  </section> -->
+
+    
+
+
+  <!-- <section>
+    <h3>A Simple Demonstration</h3>
+    <p>
+      We consider a simplified model with a single landmark on a 1D heatmap. We choose the dataset to have a single training sample at ground truth $\mathbf{y} = 5$. We visualize how gradient descent updates the heatmap,
+    </p>
+    <div class="figure-block">
+      <div class="gif-container">
+        <img src="assets/demo.gif" alt="Demo GIF" />
+      </div>
+      <p class="figure-caption">Figure 2: Comparison between Soft-argmax and ours. We use $\uparrow$ to denote where $F$ is increasing, i.e.,
+positive updates, and $\downarrow$ to denote where F is decreasing, i.e., negative updates.
+      </p>
+    </div>
+    <p>
+      After a few steps, our argmax is already located at $\mathbf{y}=5$, with a significant gap between its maximum and second maximum. Meanwhile, Soft-argmax is still struggling to find the correct maximum.
+      We observe signigicantly faster convergence when using our approach. In abstract, Soft-argmax gradually “moves” the peaks towards the target $\mathbf{y} = 5$, while ours directly increases the peak at the target while decreasing the others.
+    </p>
+  </section>
+    
+
+  <section>
+    <h3>Experiments</h3>
+    <section class="figure-block">
+      <div class="figure-image-wrapper">
+        <img src="assets/WFLW.png" alt="Table" id="table"/>
+      </div>
+      <p class="figure-caption">
+        Table 1: Comparison to SOTA facial landmark detection methods on the full set of WFLW. 
+        We report the inter-ocular NME$\downarrow$, FR%$\downarrow$, and AUC%$\uparrow$. “C” and “H” correspond to coordinate/heatmap-regression respectively.
+      </p>
+    </section>
+    <section class="figure-block">
+      <div class="figure-image-wrapper">
+        <img src="assets/2d-example.png" alt="2D" id="two_d"/>
+      </div>
+      <p class="figure-caption">
+        Figure 3: Comparison of convergence efficiency between STAR's Soft-argmax and ours. 
+        The first two columns visualize the $\hat{\mathbf{H}}$ trained with STAR at epochs 1 and 5. 
+        The last two columns visualize the $\hat{\mathbf{H}}$ trained with our loss at epochs 1 and 2. Each row corresponds to a different sample.
+      </p>
+    </section>
+    <section class="figure-block">
+      <div class="figure-image-wrapper">
+        <img src="assets/curve.png" alt="Curve"/>
+      </div>
+      <p class="figure-caption">
+        Figure 4: Comparison of NME curve throughout training between STAR and ours. 
+        We plot the curve of inter-ocular NME$\uparrow$ over training epochs for both methods. 
+        The performance improves and converges much faster using our method than using STAR.
+      </p>
+    </section>
+  </section> -->
+
+  <section>
+    <h3>Citation</h3>
+    <div class="bibtex-block"><code> @inproceedings{yang2025ltoad,
+    &nbsp;title={Toward Long-Tailed Online Anomaly Detection through Class-Agnostic Concepts},
+    &nbsp;author={Yang, Chiao-An and Peng, Kuan-Chuan and Yeh, Raymond A.},
+    &nbsp;booktitle={Proc. ICCV},
+    &nbsp;year={2025}
+  }</code></div>
+  </section>
+
+</body>
+</html>

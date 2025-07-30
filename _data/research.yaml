@@ -4,11 +4,32 @@ papers:
     authors:
       - name: <b>Chiao-An Yang</b>
       - name: Raymond A. Yeh
-    # video: https://www.youtube.com/watch?v=U_2FcJqpJo0&feature=youtu.be
+    code: https://github.com/ca-joe-yang/regression-without-softarg
+    teaser: resource/projects/RwSA/assets/demo.gif
     # pdf: https://arxiv.org/pdf/2410.22306
     project: resource/projects/RwSA
-    teaser: resource/projects/RwSA/assets
+  - title: "Toward Long-Tailed Online Anomaly Detection through Class-Agnostic Concepts"
+    venue: ICCV 2025
+    authors:
+      - name: <b>Chiao-An Yang</b>
+      - name: Kuan-Chuan Peng
+      - name: Raymond A. Yeh
+    # code: https://github.com/ca-joe-yang/regression-without-softarg
+    teaser: resource/projects/LTOAD/assets/teaser.png
+    # pdf: https://arxiv.org/pdf/2410.22306
+    project: resource/projects/LTOAD
     # code: https://github.com/ca-joe-yang/discard-in-subsampling
+  - title: "Local Scale Equivariance with Deep Equilibrium Canonicalizer in the Latent Space"
+    venue: ICCV 2025
+    authors:
+      - name: Md Ashiqur Rahman
+      - name: <b>Chiao-An Yang</b>
+      - name: Michael N. Cheng
+      - name: Lim Jun Hao
+      - name: Jeremiah Jiang
+      - name: Teck-Yian Lim
+      - name: Raymond A. Yeh 
+    teaser: resource/projects/DEC/assets/teaser.png
   - title: "Dynamic Multi-Object 3D Grounding with Language Informed Spatial Attention"
     venue: NeurIPS 2024
     authors:
@@ -29,7 +50,7 @@ papers:
     video: https://youtu.be/GPGoD9rwoBg
     # pdf: ""
     project: resource/projects/TTA
-    teaser: resource/projects/TTA/teaser.png
+    teaser: resource/projects/TTA/assets/teaser.png
     code: https://github.com/ca-joe-yang/discard-in-subsampling
   - title: "Learning to Obstruct Few-Shot Image Classification over Restricted Classes"
     venue: ECCV 2024
