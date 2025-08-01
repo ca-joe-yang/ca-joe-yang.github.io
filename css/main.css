@@ -148,6 +148,7 @@ p {
     gap: 1rem; /* space between buttons */
     justify-content: center; /* center horizontally */
     flex-wrap: wrap; /* wrap on smaller screens */
+    margin-top: 0.5em;
     margin-bottom: 2rem; /* <-- add vertical space below buttons */
 }
 
@@ -256,11 +257,14 @@ figure {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 100%;
   margin: 0;
   text-align: center;
   max-width: 100%;
   box-shadow: none;
+}
+
+figure img {
+  max-width: 100%;
 }
 
 figcaption {
@@ -274,22 +278,6 @@ figcaption {
   padding-right: 5rem;
   margin-bottom: 1rem;
 }
-
-
-
-/* figure img {
-  height: auto;
-  border-radius: 8px;
-  max-width: 100%;
-  height: auto;
-} */
-
-/* @media (max-width: 600px) {
-  .figure-block {
-    flex-direction: column;
-    align-items: center;
-  }
-} */
 
 .paper-section {
   background: #ffffff;

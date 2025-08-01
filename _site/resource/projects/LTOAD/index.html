@@ -41,8 +41,6 @@
       <span style="font-size:36px">ICCV 2025</span>
     </div>
 
-    <br>
-
     <div class="button-group">
       <a href="https://arxiv.org/abs/2507.16946" target="_blank" class="btn arxiv-btn" aria-label="arXiv Paper">
         <i class="fas fa-file-alt"></i> arXiv
@@ -174,38 +172,17 @@
       To study the effect, we sequentially split the data stream into sessions which corresponds to a sublist of the dataset.
     </p>
 
-    <div class="figure-block">
-      <!-- <div class="figure-image-wrapper">
-        <img src="assets/configurations_table.png" alt="Configurations" id="configurations_table"/>
-        <div class="figure-caption"><strong>WFLW.</strong></div>
-      </div>
-
-      <div class="figure-image-wrapper">
-        <img src="assets/configurations_figure.png" alt="Configurations" id="configurations_figure"/>
-      </div> -->
-
-      <!-- <div class="figure-item">
-        <img src="fig1.png" alt="WFLW dataset">
-        <div class="caption"><strong>WFLW.</strong></div>
-      </div>
-      <div class="figure-item">
-        <img src="fig2.png" alt="COFW dataset">
-        <div class="caption"><strong>COFW.</strong></div>
-      </div>
-      <div class="figure-item">
-        <img src="fig3.png" alt="300W dataset">
-        <div class="caption"><strong>300W.</strong></div>
-      </div> -->
-
-      
-      
+    <div class="figure-block">      
       <figure class="figure-image-wrapper">
         <img src="assets/configurations_table.png" alt="Configurations" id="configurations_table"/>
         <figcaption>Table 1. We define 8 configurations with combinations of different session type $\in$ {blurry, disjoint} and ordering type $\in$ {head-first, head-first, else}.</figcaption>
       </figure>
       <figure class="figure-image-wrapper">
         <img src="assets/configurations_figure.png" alt="Configurations" id="configurations_figure"/>
-        <figcaption>Figure 3. We visualize the 8 configurations with a toy example where $\mathcal{C}_{\text{head}}$ and $\mathcal{C}_{\text{tail}}$ each has 5 classes.</figcaption>
+        <figcaption>
+          Figure 3. We visualize the 8 configurations with a toy example 
+          where $\mathcal{C}_{\text{head}}$ and $\mathcal{C}_{\text{tail}}$ each has 5 classes.
+        </figcaption>
       </figure>
 
     </div>
@@ -230,7 +207,8 @@
           Table 2: Comparison ($\uparrow$) on long-tailed AD offline <a href="https://www.mvtec.com/company/research/datasets/mvtec-ad">MVTec</a> 
           in image-level AUROC for anomaly detection (Det.) and pixel-level AUROC for anomaly segmentation (Seg.). 
           The column CA (class-agnostic) indicates whether a method requires class names or the number of classes during training or not. 
-          We mark the best and second best performances in bold and underline.          
+          We mark the best and second best performances in bold and underline.
+        </figcaption>
       </figure>
     </div>
 
@@ -240,6 +218,7 @@
         <figcaption>
           Figure 4: Qualitative comparison among <a href="https://arxiv.org/abs/2403.20236">LTAD</a>, <a href="https://arxiv.org/abs/2310.14228">HVQ</a>, and LTOAD (ours) on MVTec. 
           Inputs from $\mathcal{C}_{\text{head}}$ / $\mathcal{C}_{\text{tail}}$  are outlined in blue / red.
+        </figcaption>
       </figure>
     </div>
 
@@ -248,13 +227,14 @@
       Our online learning algorithm $\mathcal{A}^{\tt AA}$ improves steadily under both D5-HF and D5-TF 
       while the baseline $\mathcal{A}^{\tt N}$ falls off during later steps.
     </p>
-    
+
     <div class="figure-block">
       <figure>
         <img src="assets/online.png" alt="Online Performance" id="online"/>
         <figcaption>
           Figure 5: Performance curve of $\mathcal{A}^{\tt N}$ (baseline algorithm) and $\mathcal{A}^{\tt AA}$ (our online learning algorithm) 
           in pixel-level AUROC on $\mathcal{C}_{\text{head}}$ and $\mathcal{C}_{\text{tail}}$.
+        </figcaption>
       </figure>
     </div>
     

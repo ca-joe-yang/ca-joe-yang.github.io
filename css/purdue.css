@@ -1,10 +1,4 @@
 /* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #f5f5f5;
@@ -18,54 +12,21 @@ body {
 header {
     background-color: #000000;
     color: #CBA135;
-    padding: 1.5rem 1rem;
-    border-radius: 8px;
-    margin: 0 auto 2rem auto;
-    max-width: 800px;
 }
-
-header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.3rem;
-}
-
-header h2 {
-    font-size: 1.1rem;
-    color: #dddddd;
-}
-
-/* Main content */
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 3rem; /* Top/Bottom: 2rem, Left/Right: 3rem */
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    text-align: left;
-}
-
-section {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
 /* Section titles */
-section h1 {
+/* section h1 {
     color: #000000;
     border-bottom: 2px solid #CBA135;
     display: inline-block;
     padding-bottom: 0.25rem;
     margin-bottom: 0.5rem;
+} */
+
+.section-title {
+  color: #CBA135;
 }
 
 /* Paragraphs */
-p {
-    text-align: left;
-    margin-bottom: 1rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-}
 
 /* BibTeX Citation Block */
 .bibtex-block {
@@ -109,31 +70,6 @@ p {
   background-color: #b38f2b;
 }
 
-/* Individual button icon colors (optional) */
-.github-btn i {
-  font-size: 1.2rem;
-}
-
-.arxiv-btn i {
-  font-size: 1.2rem;
-}
-
-.hf-btn i {
-  font-size: 1.2rem;
-}
-
-/* Responsive tweaks */
-@media (max-width: 500px) {
-  .button-group {
-    flex-direction: column;
-    align-items: center;
-  }
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
 a {
     color: #CBA135;
     text-decoration: none;
@@ -141,20 +77,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-/* Footer */
-footer {
-    margin-top: 2rem;
-    font-size: 0.875rem;
-    color: #555;
-    text-align: center;
-}
-
-.figure-block {
-  max-width: 1200px;
-  margin: 2rem auto;
-  text-align: center;
 }
 
 .gif-container {
@@ -181,47 +103,16 @@ footer {
   max-width: 48%;
 }
 
-.figure-caption {
-  margin-top: 0.75rem;
-  font-style: italic;
-  color: #555;
-  font-size: 0.95rem;
-}
-
-.figure-image-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.figure-image-wrapper img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
-
-.paper-section {
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  margin-bottom: 2rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.paper-section h3 {
-  font-size: 1.5rem;
-  color: #111827;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #cba135; /* or #d0021b for MERL style */
-  display: inline-block;
-  padding-bottom: 0.25rem;
-}
-
 .paper-section p {
   font-size: 1rem;
   line-height: 1.7;
   color: #333;
+}
+
+.tldr-block {
+  border-left: 6px solid #CBA135; /* MERL red */
+}
+
+.tldr-title {
+  color: #CBA135;
 }
