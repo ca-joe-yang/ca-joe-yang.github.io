@@ -1,48 +1,50 @@
 /* Reset and Base Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f5f5f5;
-    color: #000000;
-    line-height: 1.6;
-    text-align: center; /* Only the header should be centered */
-    padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #000000;
+  line-height: 1.6;
+  text-align: center; /* Only the header should be centered */
+  padding: 2rem;
 }
 
 /* Header */
 header {
-    background-color: #000000;
-    color: #CBA135;
-    padding: 1.5rem 1rem;
-    border-radius: 8px;
-    margin: 0 auto 2rem auto;
-    max-width: 800px;
+  padding: 1.5rem 1rem;
+  border-radius: 8px;
+  margin: 0 auto 2rem auto;
+  max-width: 800px;
 }
 
-header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.3rem;
+/* header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.3rem;
 }
 
 header h2 {
-    font-size: 1.1rem;
-    color: #dddddd;
-}
+  font-size: 1.1rem;
+  color: #dddddd;
+} */
 
 /* Main content */
 main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 3rem; /* Top/Bottom: 2rem, Left/Right: 3rem */
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 3rem; /* Top/Bottom: 2rem, Left/Right: 3rem */
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.title {
+  font-weight: bold;
 }
 
 section {
@@ -51,12 +53,73 @@ section {
 }
 
 /* Section titles */
-section h1 {
-    color: #000000;
-    border-bottom: 2px solid #CBA135;
-    display: inline-block;
-    padding-bottom: 0.25rem;
-    margin-bottom: 0.5rem;
+/* section h1 {
+  color: #000000;
+  border-bottom: 2px solid #CBA135;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+} */
+
+
+
+.section-title {
+  font-weight: bold;
+  max-width: 1200px;  /* Increase this number as needed */
+  font-size: 2rem;
+  color: #ba0c2f;
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+
+.authors {
+  display: flex;
+  gap: 1.5em; /* Adjust spacing here */
+  justify-content: center;
+  margin-top: 0.5em;
+}
+
+.affiliations {
+  margin-top: 0.5em;
+}
+
+.venue {
+  margin-top: 0.5em;
+}
+
+.tldr-block {
+  border-left: 6px solid #ba0c2f; /* MERL red */
+  background-color: #f9f9f9;
+  padding: 16px 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tldr-title {
+  font-weight: bold;
+  font-size: 32px;
+  color: #ba0c2f;
+  margin-bottom: 8px;
+}
+
+.tldr-content {
+  font-weight: bold;
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.tldr-content ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.tldr-content li {
+  margin-bottom: 8px;
 }
 
 /* Paragraphs */
@@ -95,7 +158,7 @@ p {
   background-color: #CBA135; /* Purdue Gold */
   color: #000000;
   padding: 0.6rem 1.3rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border-radius: 6px;
   text-decoration: none;
   cursor: pointer;
@@ -107,10 +170,11 @@ p {
 
 .btn:hover {
   background-color: #b38f2b;
+  color: #ffffff;
 }
 
 /* Individual button icon colors (optional) */
-.github-btn i {
+/* .github-btn i {
   font-size: 1.2rem;
 }
 
@@ -120,7 +184,7 @@ p {
 
 .hf-btn i {
   font-size: 1.2rem;
-}
+} */
 
 /* Responsive tweaks */
 @media (max-width: 500px) {
@@ -152,10 +216,15 @@ footer {
 }
 
 .figure-block {
-  max-width: 1200px;
   margin: 2rem auto;
   text-align: center;
+  display: flex;
+  gap: 20px;            /* Space between the two figures */
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align captions properly */
+  flex-wrap: wrap;      /* Optional: allows stacking on smaller screens */
 }
+
 
 .gif-container {
   display: flex;
@@ -181,24 +250,46 @@ footer {
   max-width: 48%;
 }
 
-.figure-caption {
+figure {
+  /* display: block; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0;
+  text-align: center;
+  max-width: 100%;
+  box-shadow: none;
+}
+
+figcaption {
+  text-align: left;
   margin-top: 0.75rem;
   font-style: italic;
   color: #555;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  /* max-width: 80%; */
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-bottom: 1rem;
 }
 
-.figure-image-wrapper {
-  display: flex;
-  justify-content: center;
-}
 
-.figure-image-wrapper img {
-  max-width: 100%;
+
+/* figure img {
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
+  max-width: 100%;
+  height: auto;
+} */
+
+/* @media (max-width: 600px) {
+  .figure-block {
+    flex-direction: column;
+    align-items: center;
+  }
+} */
 
 .paper-section {
   background: #ffffff;
@@ -211,14 +302,7 @@ footer {
   margin-right: auto;
 }
 
-.paper-section h3 {
-  font-size: 1.5rem;
-  color: #111827;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #cba135; /* or #d0021b for MERL style */
-  display: inline-block;
-  padding-bottom: 0.25rem;
-}
+
 
 .paper-section p {
   font-size: 1rem;

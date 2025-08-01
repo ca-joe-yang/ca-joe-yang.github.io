@@ -14,11 +14,9 @@ papers:
       - name: <b>Chiao-An Yang</b>
       - name: Kuan-Chuan Peng
       - name: Raymond A. Yeh
-    # code: https://github.com/ca-joe-yang/regression-without-softarg
     teaser: resource/projects/LTOAD/assets/teaser.png
     # pdf: https://arxiv.org/pdf/2410.22306
     project: resource/projects/LTOAD/index.html
-    # code: https://github.com/ca-joe-yang/discard-in-subsampling
   - title: "Local Scale Equivariance with Deep Equilibrium Canonicalizer in the Latent Space"
     venue: ICCV 2025
     authors:

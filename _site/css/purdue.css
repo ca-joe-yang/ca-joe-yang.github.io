@@ -51,7 +51,7 @@ section {
 }
 
 /* Section titles */
-section h3 {
+section h1 {
     color: #000000;
     border-bottom: 2px solid #CBA135;
     display: inline-block;
@@ -200,4 +200,28 @@ footer {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
+.paper-section {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.paper-section h3 {
+  font-size: 1.5rem;
+  color: #111827;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #cba135; /* or #d0021b for MERL style */
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+.paper-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
