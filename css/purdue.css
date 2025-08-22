@@ -1,11 +1,6 @@
 /* Reset and Base Styles */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f5f5f5;
-    color: #000000;
-    line-height: 1.6;
-    text-align: center; /* Only the header should be centered */
-    padding: 2rem;
+  background-color: #ffecbb;
 }
 
 /* Header */
@@ -13,14 +8,6 @@ header {
     background-color: #000000;
     color: #CBA135;
 }
-/* Section titles */
-/* section h1 {
-    color: #000000;
-    border-bottom: 2px solid #CBA135;
-    display: inline-block;
-    padding-bottom: 0.25rem;
-    margin-bottom: 0.5rem;
-} */
 
 .section-title {
   color: #CBA135;
@@ -30,15 +17,19 @@ header {
 
 /* BibTeX Citation Block */
 .bibtex-block {
-    background-color: #eeeeee;
-    border-left: 4px solid #CBA135;
-    padding: 1rem;
-    margin-top: 1rem;
-    font-family: monospace;
-    white-space: pre;
-    overflow-x: auto;
-    font-size: 0.9rem;
-    text-align: left;
+  background-color: #eeeeee;
+  border-left: 6px solid #CBA135;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-family: monospace;
+  white-space: pre;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+code {
+  color: #ad8928;
 }
 
 .button-group {
