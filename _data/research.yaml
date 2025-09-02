@@ -16,7 +16,7 @@ papers:
       - name: Raymond A. Yeh
     teaser: resource/projects/LTOAD/assets/teaser.png
     paper: https://arxiv.org/abs/2507.16946
-    project: resource/projects/LTOAD
+    # project: resource/projects/LTOAD
   - title: "Local Scale Equivariance with Deep Equilibrium Canonicalizer in the Latent Space"
     venue: ICCV 2025
     authors:
@@ -26,7 +26,7 @@ papers:
       - name: Lim Jun Hao
       - name: Jeremiah Jiang
       - name: Teck-Yian Lim
-      - name: Raymond A. Yeh 
+      - name: Raymond A. Yeh
     teaser: resource/projects/DEC/assets/teaser.png
   - title: "Dynamic Multi-Object 3D Grounding with Language Informed Spatial Attention"
     venue: NeurIPS 2024
@@ -67,7 +67,7 @@ papers:
       - name: <b>Chiao-An Yang</b>
       - name: Meng-Lin Wu
       - name: Raymond A. Yeh
-      - name: Yu-Chiang Frank Wang      
+      - name: Yu-Chiang Frank Wang
     # poster: resource/projects/SGE/poster.png
     paper: https://www.researchgate.net/publication/374543372_Consistent_and_Multi-Scale_Scene_Graph_Transformer_for_Semantic-Guided_Image_Outpainting
     # project: ""
@@ -81,7 +81,7 @@ papers:
       - name: Wan-Cyuan Fan
       - name: Cheng-Fu Yang
       - name: Meng-Lin Wu
-      - name: Yu-Chiang Frank Wang      
+      - name: Yu-Chiang Frank Wang
     poster: resource/projects/SGE/poster.png
     paper: https://openaccess.thecvf.com/content/CVPR2022/papers/Yang_Scene_Graph_Expansion_for_Semantics-Guided_Image_Outpainting_CVPR_2022_paper.pdf
     # project: ""
@@ -105,7 +105,7 @@ papers:
     venue: ICIP 2021
     authors:
       - name: <b>Chiao-An Yang</b>
-      - name: Zhixiang Wang 
+      - name: Zhixiang Wang
       - name: Yen-Yu Lin
       - name: Yung-Yu Chuang
     # poster: resource/projects/SGE/poster.png
