@@ -93,8 +93,8 @@ papers:
   - title: Robust Image Outpainting With Learnable Image Margins
     venue: ICIP 2021
     authors:
-      - name: Cheng-Yo Tan*
       - name: <b>Chiao-An Yang*</b>
+      - name: Cheng-Yo Tan*
       - name: Shang-Fu Chen
       - name: Meng-Lin Wu
       - name: Yu-Chiang Frank Wang
