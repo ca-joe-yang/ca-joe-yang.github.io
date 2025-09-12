@@ -28,6 +28,9 @@ papers:
       - name: Teck-Yian Lim
       - name: Raymond A. Yeh
     teaser: resource/projects/DEC/assets/teaser.png
+    paper: https://arxiv.org/abs/2508.14187
+    code: https://github.com/ashiq24/local-scale-equivariance
+    project: https://ashiq24.github.io/local-scale-equivariance/
   - title: "Dynamic Multi-Object 3D Grounding with Language Informed Spatial Attention"
     venue: NeurIPS 2024
     authors:
