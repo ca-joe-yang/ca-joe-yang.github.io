@@ -8,6 +8,7 @@ papers:
     teaser: resource/projects/RwSA/assets/demo.gif
     paper: https://arxiv.org/abs/2508.14929
     project: resource/projects/RwSA
+    video: https://youtu.be/iT0RBWYlHjw
   - title: "Toward Long-Tailed Online Anomaly Detection through Class-Agnostic Concepts"
     venue: ICCV 2025
     authors:
