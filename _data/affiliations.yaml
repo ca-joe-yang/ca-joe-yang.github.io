@@ -2,11 +2,15 @@ affiliation:
   - name: Purdue Univeristy
     date: 2022-Present
     logo: logos/purdue_logo.png
-    link: https://www.purdue.edu/
 
   - name: National Taiwan University
     date: 2013-2019, 2020-2022
     logo: logos/ntu_logo.png
-    link: https://www.ntu.edu.tw/
 
+  - name: MERL (Research Intern)
+    date: 2024
+    logo: logos/merl_logo.png
 
+  - name: NVIDIA (Research Intern)
+    date: 2025
+    logo: logos/nvidia_logo.png
