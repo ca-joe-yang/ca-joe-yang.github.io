@@ -75,7 +75,8 @@ section {
 
 
 .authors {
-  display: flex;
+  /* display: flex; */
+  display: inline-block;
   gap: 1.5em; /* Adjust spacing here */
   justify-content: center;
   margin-top: 0.5em;
@@ -110,7 +111,7 @@ section {
   text-align: left;
   font-size: 20px;
   line-height: 1.6;
-  color: #000000;
+  /* color: #000000; */
 }
 
 .tldr-content ol {
