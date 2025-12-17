@@ -29,6 +29,20 @@
   font-size: 16px;
 }
 
+.affiliation-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3em;
+  margin: 0 1em;
+}
+
+.affiliation-logo {
+  height: 100px;
+  width: auto;
+  vertical-align: middle;
+}
+
 /* Venue styling */
 .venue {
   margin-top: 1.2em;
