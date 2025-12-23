@@ -1,7 +1,0 @@
-User-agent: *
-Disallow: /resource/
-Disallow: /logos/
-Disallow: /_site/
-
-# Allow only specific pages
-Allow: /index.html
