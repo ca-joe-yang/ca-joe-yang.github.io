@@ -11,6 +11,7 @@ papers:
       - name: Raymond A. Yeh
       - name: Yu-Chiang Frank Wang
       - name: Min-Hung Chen
+    paper: https://arxiv.org/abs/2512.17012
   - title: "Heatmap Regression without Soft-Argmax for Facial Landmark Detection"
     venue: ICCV 2025
     authors:
@@ -29,7 +30,8 @@ papers:
       - name: Raymond A. Yeh
     teaser: resource/projects/LTOAD/assets/teaser.png
     paper: https://arxiv.org/abs/2507.16946
-    # project: resource/projects/LTOAD
+    video: https://www.youtube.com/watch?v=0qSFM6lNc7k
+    project: https://zenodo.org/records/16283853
   - title: "Local Scale Equivariance with Deep Equilibrium Canonicalizer in the Latent Space"
     venue: ICCV 2025
     authors:
