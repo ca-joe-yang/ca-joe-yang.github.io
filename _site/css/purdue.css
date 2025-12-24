@@ -1,0 +1,109 @@
+/* Reset and Base Styles */
+body {
+  background-color: #ffecbb;
+}
+
+/* Header */
+header {
+    background-color: #000000;
+    color: #CBA135;
+}
+
+.section-title {
+  color: #CBA135;
+}
+
+/* Paragraphs */
+
+/* BibTeX Citation Block */
+.bibtex-block {
+  background-color: #eeeeee;
+  border-left: 6px solid #CBA135;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-family: monospace;
+  white-space: pre;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+code {
+  color: #ad8928;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem; /* space between buttons */
+    justify-content: center; /* center horizontally */
+    flex-wrap: wrap; /* wrap on smaller screens */
+    margin-bottom: 2rem; /* <-- add vertical space below buttons */
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* space between icon and text */
+  background-color: #CBA135; /* Purdue Gold */
+  color: #000000;
+  padding: 0.6rem 1.3rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background-color: #b38f2b;
+}
+
+a {
+    color: #CBA135;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.gif-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.gif-container img {
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* If only one image: allow it to expand */
+.gif-container img:only-child {
+  max-width: 90%;
+}
+
+/* If two images: restrict width so they sit side-by-side */
+.gif-container img {
+  max-width: 48%;
+}
+
+.paper-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.tldr-block {
+  border-left: 6px solid #CBA135; /* MERL red */
+}
+
+.tldr-title {
+  color: #CBA135;
+}

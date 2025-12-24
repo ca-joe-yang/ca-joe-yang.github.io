@@ -1,0 +1,98 @@
+<div class="container">
+  <h1>Publications 
+  </h1>
+  <p></p>
+  <div class="collapse multi-collapse" id="c1">
+    {% for paper in site.data.research.papers %}
+      {% if paper.is_selected %}
+        <div class="row justify-content-center">
+          <div class="col-md-5 my-auto" style="height: 180px;">
+            <div class="text-center">
+              {% if paper.teaser %}
+                <img class="img-fluid" src={{paper.teaser}}  style="max-height: 180px; width: auto">
+              {% endif %}
+            </div>
+          </div>
+          <div class="col-md-7 my-auto">
+            <h4> {{paper.title}} </h4>
+            <p>
+            {% for author in paper.authors %}
+              {{author.name}}{% if forloop.last == false%}, {% endif %}
+            {% endfor %}
+            <br>
+      		  <i>{{paper.venue}}</i>
+            {% if paper.is_talk %}
+              <br>
+              <b class="text-danger">{{paper.is_talk}}</b>
+            {% endif %}
+            <br>
+            {% if paper.pdf %}
+              <a href="{{paper.pdf}}" class="btn btn-primary mr-1 mt-2" role="button">PDF</a>
+            {% endif %}
+            {% if paper.project %}
+              <a href="{{paper.project}}" class="btn btn-primary mr-1 mt-2" role="button">Project</a>
+            {% endif %}
+            {% if paper.code %}
+              <a href="{{paper.code}}" class="btn btn-primary mt-2" role="button">Code</a>
+            {% endif %}
+      		  </p>
+          </div>
+        </div>
+        {% if forloop.last == false%}
+          <hr style = "height:5px">
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="show multi-collapse" id="c2">
+    {% for paper in site.data.research.papers %}
+    <div class="row justify-content-center">
+      <div class="col-md-5 my-auto" style="height: 180px;">
+        <div class="text-center">
+          {% if paper.teaser %}
+            <img class="img-fluid" src={{paper.teaser}}  style="max-height: 180px; width: auto">  <!--style="max-width: 430px; max-height: 170px"-->
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-md-7 my-auto">
+        <h4> {{paper.title}} </h4>
+        <p>
+        {% for author in paper.authors %}
+          {{author.name}}{% if forloop.last == false%}, {% endif %}
+        {% endfor %}
+        <br>
+        <i>{{paper.venue}}</i>
+        {% if paper.is_talk %}
+          <br>
+          <b class="text-danger">{{paper.is_talk}}</b>
+        {% endif %}
+        <br>
+        {% if paper.paper %}
+          <a href="{{paper.paper}}" class="btn btn-primary mr-1 mt-2" role="button">Paper</a>
+        {% endif %}
+        {% if paper.project %}
+          <a href="{{paper.project}}" class="btn btn-primary mr-1 mt-2" role="button">Project</a>
+        {% endif %}
+        {% if paper.code %}
+          <a href="{{paper.code}}" class="btn btn-primary mt-2" role="button">Code</a>
+        {% endif %}
+        {% if paper.video %}
+          <a href="{{paper.video}}" class="btn btn-primary mt-2" role="button">Video</a>
+        {% endif %}
+        {% if paper.slide %}
+          <a href="{{paper.slide}}" class="btn btn-primary mt-2" role="button">Slide</a>
+        {% endif %}
+        {% if paper.poster %}
+          <a href="{{paper.poster}}" class="btn btn-primary mt-2" role="button">Poster</a>
+        {% endif %}
+        </p>
+      </div>
+    </div>
+    {% if forloop.last == false%}
+      <hr style = "height:5px">
+    {% endif %}
+    {% endfor %}
+  </div>
+
+</div>

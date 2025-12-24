@@ -1,0 +1,132 @@
+papers:
+  - title: "4D-RGPT: Toward Region-level 4D Understanding via Perceptual Distillation"
+    project: resource/projects/4D_RGPT
+    venue: Under Review
+    teaser: resource/projects/4D_RGPT/assets/teaser.png
+    authors:
+      - name: <b>Chiao-An Yang</b>
+      - name: Ryo Hachiuma
+      - name: Sifei Liu
+      - name: Subhashree Radhakrishnan
+      - name: Raymond A. Yeh
+      - name: Yu-Chiang Frank Wang
+      - name: Min-Hung Chen
+  - title: "Heatmap Regression without Soft-Argmax for Facial Landmark Detection"
+    venue: ICCV 2025
+    authors:
+      - name: <b>Chiao-An Yang</b>
+      - name: Raymond A. Yeh
+    code: https://github.com/ca-joe-yang/regression-without-softarg
+    teaser: resource/projects/RwSA/assets/demo.gif
+    paper: https://arxiv.org/abs/2508.14929
+    project: resource/projects/RwSA
+    video: https://youtu.be/iT0RBWYlHjw
+  - title: "Toward Long-Tailed Online Anomaly Detection through Class-Agnostic Concepts"
+    venue: ICCV 2025
+    authors:
+      - name: <b>Chiao-An Yang</b>
+      - name: Kuan-Chuan Peng
+      - name: Raymond A. Yeh
+    teaser: resource/projects/LTOAD/assets/teaser.png
+    paper: https://arxiv.org/abs/2507.16946
+    # project: resource/projects/LTOAD
+  - title: "Local Scale Equivariance with Deep Equilibrium Canonicalizer in the Latent Space"
+    venue: ICCV 2025
+    authors:
+      - name: Md Ashiqur Rahman
+      - name: <b>Chiao-An Yang</b>
+      - name: Michael N. Cheng
+      - name: Lim Jun Hao
+      - name: Jeremiah Jiang
+      - name: Teck-Yian Lim
+      - name: Raymond A. Yeh
+    teaser: resource/projects/DEC/assets/teaser.png
+    paper: https://arxiv.org/abs/2508.14187
+    code: https://github.com/ashiq24/local-scale-equivariance
+    project: https://ashiq24.github.io/local-scale-equivariance/
+  - title: "Dynamic Multi-Object 3D Grounding with Language Informed Spatial Attention"
+    venue: NeurIPS 2024
+    authors:
+      - name: Haomeng Zheng
+      - name: <b>Chiao-An Yang</b>
+      - name: Raymond A. Yeh
+    video: https://www.youtube.com/watch?v=U_2FcJqpJo0&feature=youtu.be
+    pdf: https://arxiv.org/pdf/2410.22306
+    project: https://haomengz.github.io/dlisa/
+    teaser: resource/projects/LISA/teaser.png
+    code: https://github.com/ca-joe-yang/discard-in-subsampling
+  - title: "Deep Nets with Subsampling Layers Unwittingly Discard Useful Activations at Test-Time"
+    venue: ECCV 2024
+    authors:
+      - name: <b>Chiao-An Yang</b>
+      - name: Ziwei Liu
+      - name: Raymond A. Yeh
+    video: https://youtu.be/GPGoD9rwoBg
+    # pdf: ""
+    project: resource/projects/TTA
+    teaser: resource/projects/TTA/assets/teaser.png
+    code: https://github.com/ca-joe-yang/discard-in-subsampling
+  - title: "Learning to Obstruct Few-Shot Image Classification over Restricted Classes"
+    venue: ECCV 2024
+    authors:
+      - name: Amber Yijia Zheng*
+      - name: <b>Chiao-An Yang*</b>
+      - name: Raymond A. Yeh
+    video: https://youtu.be/DZVoGIrNlak
+    # pdf: ""
+    # project: ""
+    teaser: resource/projects/LTO/teaser.png
+    code: https://github.com/amberyzheng/LTO
+  - title: Consistent and Multi-scale Scene Graph Transformer for Semantic-Guided Image Outpainting
+    venue: ICIP 2023
+    authors:
+      - name: <b>Chiao-An Yang</b>
+      - name: Meng-Lin Wu
+      - name: Raymond A. Yeh
+      - name: Yu-Chiang Frank Wang
+    # poster: resource/projects/SGE/poster.png
+    paper: https://www.researchgate.net/publication/374543372_Consistent_and_Multi-Scale_Scene_Graph_Transformer_for_Semantic-Guided_Image_Outpainting
+    # project: ""
+    teaser: resource/projects/MultiSGE/teaser.png
+    # slide: resource/projects/SGE/slide.pdf
+  - title: "Scene Graph Expansion for Semantics-Guided Image Outpainting"
+    venue: CVPR 2022
+    authors:
+      - name: <b>Chiao-An Yang</b>
+      - name: Cheng-Yo Tan
+      - name: Wan-Cyuan Fan
+      - name: Cheng-Fu Yang
+      - name: Meng-Lin Wu
+      - name: Yu-Chiang Frank Wang
+    poster: resource/projects/SGE/poster.png
+    paper: https://openaccess.thecvf.com/content/CVPR2022/papers/Yang_Scene_Graph_Expansion_for_Semantics-Guided_Image_Outpainting_CVPR_2022_paper.pdf
+    # project: ""
+    teaser: resource/projects/SGE/teaser.png
+    slide: resource/projects/SGE/slide.pdf
+  - title: Robust Image Outpainting With Learnable Image Margins
+    venue: ICIP 2021
+    authors:
+      - name: <b>Chiao-An Yang*</b>
+      - name: Cheng-Yo Tan*
+      - name: Shang-Fu Chen
+      - name: Meng-Lin Wu
+      - name: Yu-Chiang Frank Wang
+    poster: resource/projects/Margin/poster.png
+    paper: https://ieeexplore.ieee.org/document/9506634
+    # project: ""
+    video: https://www.youtube.com/watch?v=6T-eS01pQkE
+    teaser: resource/projects/Margin/teaser.png
+    # slide: resource/projects/SGE/slide.pdf
+  - title: Soft Ranking Threshold Losses For Image Retrieval
+    venue: ICIP 2021
+    authors:
+      - name: <b>Chiao-An Yang</b>
+      - name: Zhixiang Wang
+      - name: Yen-Yu Lin
+      - name: Yung-Yu Chuang
+    # poster: resource/projects/SGE/poster.png
+    paper: https://ieeexplore.ieee.org/document/9506634
+    # project: ""
+    video: https://youtu.be/mLQ9bxTWP8w
+    teaser: resource/projects/SoftRank/teaser.png
+    poster: resource/projects/SoftRank/poster.pdf
