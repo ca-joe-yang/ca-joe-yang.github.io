@@ -70,6 +70,7 @@ papers:
     code: https://github.com/ca-joe-yang/discard-in-subsampling
   - title: "Learning to Obstruct Few-Shot Image Classification over Restricted Classes"
     venue: ECCV 2024
+    paper: https://arxiv.org/abs/2409.19210
     authors:
       - name: Amber Yijia Zheng*
       - name: <b>Chiao-An Yang*</b>
