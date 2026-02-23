@@ -1,7 +1,7 @@
 papers:
   - title: "4D-RGPT: Toward Region-level 4D Understanding via Perceptual Distillation"
     project: resource/projects/4D_RGPT
-    venue: Under Review
+    venue: CVPR 2026
     teaser: resource/projects/4D_RGPT/assets/teaser.png
     authors:
       - name: <b>Chiao-An Yang</b>
