@@ -224,3 +224,41 @@
 .carousel-dot.active {
   background-color: #76b900;
 }
+
+/* Button hover - only underline text, not icon */
+.btn {
+  text-decoration: none !important;
+}
+
+.btn:hover {
+  text-decoration: none !important;
+}
+
+.btn i {
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+.btn:hover i {
+  text-decoration: none !important;
+}
+
+.btn span {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover span {
+  text-decoration: underline;
+}
+
+.btn .fab,
+.btn .fas {
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+.btn:hover .fab,
+.btn:hover .fas {
+  text-decoration: none !important;
+}
