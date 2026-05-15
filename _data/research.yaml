@@ -106,7 +106,7 @@ papers:
     # project: ""
     teaser: resource/projects/SGE/teaser.png
     slide: resource/projects/SGE/slide.pdf
-  - title: Robust Image Outpainting With Learnable Image Margins
+  - title: Robust Image Outpainting with Learnable Image Margins
     venue: ICIP 2021
     authors:
       - name: <b>Chiao-An Yang*</b>
@@ -120,7 +120,7 @@ papers:
     video: https://www.youtube.com/watch?v=6T-eS01pQkE
     teaser: resource/projects/Margin/teaser.png
     # slide: resource/projects/SGE/slide.pdf
-  - title: Soft Ranking Threshold Losses For Image Retrieval
+  - title: Soft Ranking Threshold Losses for Image Retrieval
     venue: ICIP 2021
     authors:
       - name: <b>Chiao-An Yang</b>

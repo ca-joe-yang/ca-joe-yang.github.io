@@ -1,7 +1,7 @@
 ---
 layout: project_layout
 permalink: /resource/projects/RwSA/
-title: "Heatmap Regression without Soft-argmax for Facial Landmark Detection"
+title: "Heatmap Regression without Soft-Argmax for Facial Landmark Detection"
 theme: purdue
 
 authors:
@@ -41,7 +41,7 @@ bibtex: |
     In this work, we revisit this long-standing choice of using $\tt Soft\text{-}argmax$ and demonstrate that it is not the only way to achieve strong performance.
     Instead, we propose an alternative training objective based on the classic structured prediction framework.
     Empirically, our method achieves state-of-the-art performance on three facial landmark benchmarks (WFLW, COFW, and 300W),
-    converging $2.2\times$ faster during training while maintaining better and competitive accuracy.
+    converging $2.2\times$ faster during training while maintaining competitive or better accuracy.
   </p>
 
   {% include project/figure.html
@@ -62,7 +62,7 @@ bibtex: |
   <p>
     In heatmap regression methods, given an input, the model outputs $N$ heatmap $\hat{\mathbf{H}} = [\hat{\mathbf{H}}_1, \dots, \hat{\mathbf{H}}_N] \in \mathbb{R}^{N\times H \times W}$
     where each heatmap $\hat{\mathbf{H}}_n$ represents a score of each pixel being a landmark.
-    They are often trained by minimizing the distance between a soft approximation of the landmark coodinates $\tilde{\mathbf{y}}_n$ and the ground truth $\mathbf{y}_n$,
+    They are often trained by minimizing the distance between a soft approximation of the landmark coordinates $\tilde{\mathbf{y}}_n$ and the ground truth $\mathbf{y}_n$,
     \begin{align}
     \sum_n \|\tilde{\mathbf{y}}_n - \mathbf{y}_n\|_2^2.
     \end{align}
@@ -76,7 +76,7 @@ bibtex: |
     \begin{align}
     \epsilon \ln \left(\sum_{\hat{\mathbf{y}}_n}  \exp \frac{\Delta(\mathbf{y}_n, \hat{\mathbf{y}}_n) + F_n(\hat{\mathbf{y}}_n, \mathbf{X}, \theta)}{\epsilon}\right) - F_n(\mathbf{y}_n, \mathbf{X}, \theta).
     \end{align}
-    Here we define $F_n(\mathbf{y}_n,\mathbf{X};\theta)$ as the scoring function of each possible coordinates for each landmark and $\Delta$ is an margin function of choice, e.g. $\ell_1$, $\ell_2$.
+    Here we define $F_n(\mathbf{y}_n,\mathbf{X};\theta)$ as the scoring function of each possible coordinates for each landmark and $\Delta$ is a margin function of choice, e.g. $\ell_1$, $\ell_2$.
   </p>
 {% include project/section-end.html %}
 
@@ -95,7 +95,7 @@ bibtex: |
   </div>
   <p>
     After a few steps, our argmax is already located at $\mathbf{y}=5$, with a significant gap between its maximum and second maximum. Meanwhile, Soft-argmax is still struggling to find the correct maximum.
-    We observe signigicantly faster convergence when using our approach. In abstract, Soft-argmax gradually &ldquo;moves&rdquo; the peaks towards the target $\mathbf{y} = 5$, while ours directly increases the peak at the target while decreasing the others.
+    We observe significantly faster convergence when using our approach. In abstract, Soft-argmax gradually &ldquo;moves&rdquo; the peaks towards the target $\mathbf{y} = 5$, while ours directly increases the peak at the target while decreasing the others.
   </p>
 {% include project/section-end.html %}
 
