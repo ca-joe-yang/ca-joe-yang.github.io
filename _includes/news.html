@@ -1,0 +1,7 @@
+<div class="section-title"><h1>News</h1></div>
+<dl class="news-list">
+  {% for item in site.data.news.news %}
+    <dt class="news-date">{{ item.date }}</dt>
+    <dd class="news-text">{{ item.text }}</dd>
+  {% endfor %}
+</dl>

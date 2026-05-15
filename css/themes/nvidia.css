@@ -1,0 +1,7 @@
+/* NVIDIA green */
+:root {
+  --theme-primary:        #76b900;
+  --theme-primary-dark:   #5a8a00;
+  --theme-bg-tint:        #ecffca;
+  --theme-on-primary:     #ffffff;
+}

@@ -1,0 +1,13 @@
+/* Purdue: Rush variant of Boilermaker Gold (#DAAA00) as accent, black for headings,
+ * near-white background. Cleaner than the earthy Old Gold (#CBA135) without losing
+ * the gold-on-black identity Purdue is known for. */
+:root {
+  --theme-primary:        #DAAA00;   /* Purdue Rush gold — buttons, accents */
+  --theme-primary-dark:   #b08c00;   /* darker gold for hover */
+  --theme-bg-tint:        #fafafa;   /* neutral light gray, no warm wash */
+  --theme-on-primary:     #000000;   /* black text on gold buttons */
+  --theme-section-title:  #1a1a1a;   /* near-black headings, max readability */
+  --theme-link:           #b08c00;   /* darker gold for inline links */
+  --theme-tldr-accent:    #DAAA00;
+  --theme-bibtex-border:  #DAAA00;
+}

@@ -1,0 +1,632 @@
+/* =============================================================================
+ * project.css — Component library for research project pages.
+ *
+ * Loaded by _layouts/project_layout.html. Pair with a theme file from
+ * css/themes/<name>.css that overrides the --theme-* custom properties below.
+ * ============================================================================= */
+
+:root {
+  /* Neutral defaults — themed project pages override these via css/themes/<name>.css.
+     The homepage loads project.css without a theme and gets this neutral palette. */
+  --theme-primary:        #495057;   /* slate */
+  --theme-primary-dark:   #2d3748;
+  --theme-bg-tint:        #f5f5f5;
+  --theme-on-primary:     #ffffff;
+  --theme-link:           var(--theme-primary);
+  --theme-bibtex-border:  var(--theme-primary);
+  --theme-bibtex-bg:      #eeeeee;
+  --theme-section-title:  var(--theme-primary);
+  --theme-tldr-accent:    var(--theme-primary);
+
+  /* Theme-independent accents */
+  --accent-purple:        #7600b9;
+  --hl-soft-bg:           #ffe6ff;
+  --hl-mute-bg:           #dadada;
+  --text-muted:           #555;
+}
+
+/* --- Reset & base --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--theme-bg-tint);
+  color: #000000;
+  line-height: 1.6;
+  text-align: center;
+  padding: 2rem;
+}
+
+a {
+  color: var(--theme-link);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+p {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.paper-section > p {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.paper-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* --- Paper section card --- */
+.paper-section {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  font-weight: bold;
+  max-width: 1200px;
+  font-size: 2rem;
+  color: var(--theme-section-title);
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+/* --- Title / authors / affiliations / venue --- */
+.title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.3;
+  margin-bottom: 1.2em;
+}
+
+.authors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em 1.5em;
+  justify-content: center;
+  margin-top: 1.0em;
+}
+
+.authors span {
+  font-size: 20px;
+}
+
+/* Tighter inter-author spacing for long-title pages where authors are auto-numbered. */
+.authors sup {
+  margin-right: 0.1em;
+}
+
+.affiliations {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1.8;
+}
+
+.affiliations span {
+  font-size: 16px;
+}
+
+.affiliation-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3em;
+  margin: 0 1em;
+}
+
+.affiliation-logo {
+  height: 100px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.venue {
+  margin-top: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+/* --- Buttons / link group --- */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.5em;
+  margin-bottom: 2rem;
+}
+
+.button-group .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--theme-primary);
+  color: var(--theme-on-primary);
+  padding: 0.6rem 1.3rem;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.button-group .btn:hover {
+  background-color: var(--theme-primary-dark);
+  color: var(--theme-on-primary);
+  text-decoration: none !important;
+}
+
+.button-group .btn i,
+.button-group .btn .fab,
+.button-group .btn .fas {
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+.button-group .btn span {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button-group .btn:hover span {
+  text-decoration: underline;
+}
+
+.button-group .btn:hover i,
+.button-group .btn:hover .fab,
+.button-group .btn:hover .fas {
+  text-decoration: none !important;
+}
+
+@media (max-width: 500px) {
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  .button-group .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* --- TLDR callout --- */
+.tldr-block {
+  border-left: 6px solid var(--theme-tldr-accent);
+  background-color: #f9f9f9;
+  padding: 16px 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tldr-title {
+  font-weight: bold;
+  font-size: 32px;
+  color: var(--theme-tldr-accent);
+  margin-bottom: 8px;
+}
+
+.tldr-content {
+  font-weight: bold;
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.tldr-content ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.tldr-content li {
+  margin-bottom: 8px;
+}
+
+/* --- Inline highlights --- */
+.highlight-primary {
+  color: var(--theme-primary);
+  font-weight: 600;
+}
+
+.highlight-accent {
+  color: var(--accent-purple);
+  font-weight: 600;
+}
+
+.highlight-soft {
+  background-color: var(--hl-soft-bg);
+  color: #000000;
+  font-weight: bold;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+.highlight-mute {
+  background-color: var(--hl-mute-bg);
+  color: #000000;
+  font-weight: bold;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+/* --- Custom ordered lists --- */
+.paper-section ul.custom-list,
+.paper-section ul.list-123 {
+  list-style: none;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.paper-section ul.custom-list  { counter-reset: custom-counter; }
+.paper-section ul.list-123     { counter-reset: number-counter; }
+
+.paper-section ul.custom-list li,
+.paper-section ul.list-123 li {
+  margin-bottom: 0.5em;
+  position: relative;
+  padding-left: 2em;
+}
+
+.paper-section ul.custom-list li { counter-increment: custom-counter; }
+.paper-section ul.list-123 li    { counter-increment: number-counter; }
+
+.paper-section ul.custom-list li::before {
+  content: "(" counter(custom-counter, lower-alpha) ") ";
+  position: absolute;
+  left: 0;
+  font-weight: normal;
+}
+
+.paper-section ul.list-123 li::before {
+  content: counter(number-counter) ". ";
+  position: absolute;
+  left: 0;
+  font-weight: normal;
+}
+
+/* --- Subsection --- */
+.paper-subsection {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.paper-subsection h2 {
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: left;
+}
+
+.paper-subsection p {
+  display: block;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* --- Figures --- */
+.figure-block {
+  margin: 2rem auto;
+  text-align: center;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+  max-width: 100%;
+  box-shadow: none;
+}
+
+figure img {
+  max-width: 100%;
+}
+
+figcaption {
+  text-align: left;
+  margin-top: 0.75rem;
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-bottom: 1rem;
+}
+
+.figure-image-teaser {
+  max-width: 80%;
+  height: auto;
+}
+
+/* --- GIF row (side-by-side or single, with rounded shadow) --- */
+.gif-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.gif-container img {
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  max-width: 48%;
+}
+
+.gif-container img:only-child {
+  max-width: 90%;
+}
+
+/* --- YouTube / external iframe wrapper --- */
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.video-container iframe {
+  max-width: 100%;
+  border: 0;
+}
+
+/* --- Video carousel --- */
+.video-carousel {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.video-carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-carousel-item {
+  display: none !important;
+  flex-direction: column;
+  width: 100%;
+}
+
+.video-carousel-item.active {
+  display: flex !important;
+}
+
+.video-carousel-item video {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.video-caption {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.video-carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--theme-primary);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.carousel-dot:hover {
+  background-color: color-mix(in srgb, var(--theme-primary) 30%, transparent);
+}
+
+.carousel-dot.active {
+  background-color: var(--theme-primary);
+}
+
+/* --- BibTeX block --- */
+.bibtex-block {
+  background-color: var(--theme-bibtex-bg);
+  border-left: 6px solid var(--theme-bibtex-border);
+  padding: 1rem;
+  margin-top: 1rem;
+  font-family: monospace;
+  white-space: pre;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+/* --- Homepage: avatar + social icons + news --- */
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  border: 3px solid #ffffff;
+  display: block;
+  margin: 0 auto;
+}
+
+.contact-block {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.contact-block strong { font-size: 1.05rem; }
+.contact-block address { font-style: normal; margin: 0.4rem 0 0.8rem; color: var(--text-muted); }
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  margin: 0.8rem 0 0.4rem;
+}
+.social-icons a {
+  display: inline-flex;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.social-icons a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+.social-icons img {
+  width: 36px;
+  height: 36px;
+}
+
+.news-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 1.5rem;
+  row-gap: 0.5rem;
+  text-align: left;
+  margin: 0.5rem 2rem 0;
+  padding: 0;
+  max-height: 14rem;
+  overflow-y: auto;
+}
+.news-list dt {
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.news-list dd { margin: 0; }
+
+.affiliation-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.affiliation-row .affiliation-item {
+  min-width: 140px;
+  max-width: 200px;
+  text-align: center;
+}
+.affiliation-row .affiliation-item img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+.affiliation-row .affiliation-item .aff-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+/* --- Homepage: publication list --- */
+.pub-list {
+  text-align: left;
+}
+
+.pub-row {
+  align-items: center;
+}
+
+.pub-teaser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+}
+.pub-teaser img {
+  max-width: 100%;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.pub-meta h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.35;
+}
+.pub-authors {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 0.4rem;
+}
+.pub-authors i {
+  color: var(--text-muted);
+}
+.author-name {
+  white-space: nowrap;
+}
+.pub-links {
+  margin: 0;
+}
+.pub-links .btn {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.6rem;
+}
+
+.pub-divider {
+  border: 0;
+  border-top: 1px solid #e3e3e3;
+  margin: 1.5rem 0;
+}
+
+/* --- Homepage: teaching / awards lists --- */
+.teaching-list,
+.awards-list {
+  text-align: left;
+  max-width: 800px;
+  margin: 0.5rem auto;
+  padding-left: 1.5rem;
+}
+.teaching-list li,
+.awards-list li {
+  margin-bottom: 0.4rem;
+}
+

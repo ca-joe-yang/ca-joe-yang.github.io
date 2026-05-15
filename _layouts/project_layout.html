@@ -1,4 +1,55 @@
-{% include project_header.html %}
-  {{ content }}
-{% include footer.html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>{{ page.title }}</title>
 
+  <link rel="icon" href="/resource/favicon.ico" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+        crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+          crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/css/project.css">
+  {% if page.theme %}<link rel="stylesheet" href="/css/themes/{{ page.theme }}.css">{% endif %}
+  {% if page.extra_css %}<link rel="stylesheet" href="./style.css">{% endif %}
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+  </script>
+  <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const items = document.querySelectorAll('.video-carousel-item');
+      const dots  = document.querySelectorAll('.carousel-dot');
+      if (!items.length) return;
+
+      function showSlide(i) {
+        items.forEach((el, k) => el.classList.toggle('active', k === i));
+        dots .forEach((el, k) => el.classList.toggle('active', k === i));
+      }
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          showSlide(parseInt(dot.getAttribute('data-index')));
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  {% include project/title-block.html %}
+  {{ content }}
+  {% if page.bibtex %}{% include project/bibtex.html %}{% endif %}
+</body>
+</html>

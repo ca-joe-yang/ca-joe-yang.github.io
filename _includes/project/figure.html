@@ -1,0 +1,15 @@
+{%- comment -%}
+  A single captioned figure.
+  Params: src (required), caption, alt, id, max_width (e.g. "70%"), wrapper_class
+{%- endcomment -%}
+<div class="figure-block">
+  <figure{% if include.wrapper_class %} class="{{ include.wrapper_class }}"{% endif %}{% if include.id %} id="{{ include.id }}-block"{% endif %}>
+    <img src="{{ include.src }}"
+         alt="{{ include.alt | default: '' }}"
+         {% if include.id %}id="{{ include.id }}"{% endif %}
+         {% if include.max_width %}style="max-width: {{ include.max_width }};"{% endif %}/>
+    {%- if include.caption %}
+    <figcaption>{{ include.caption }}</figcaption>
+    {%- endif %}
+  </figure>
+</div>

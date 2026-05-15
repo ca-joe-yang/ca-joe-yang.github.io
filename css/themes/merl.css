@@ -1,0 +1,8 @@
+/* MERL red (Mitsubishi Electric Research Laboratories) */
+:root {
+  --theme-primary:        #d0021b;
+  --theme-primary-dark:   #73000d;
+  --theme-bg-tint:        #ffe2e5;
+  --theme-on-primary:     #ffffff;
+  --theme-bibtex-border:  #ba0c2f;
+}

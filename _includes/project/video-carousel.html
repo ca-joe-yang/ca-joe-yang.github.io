@@ -1,0 +1,32 @@
+{%- comment -%}
+  Multi-video carousel with dot navigation.
+  Param: videos (required) — a list of {src, caption} objects.
+
+  Usage in page front matter:
+    r4d_videos:
+      - {src: assets/v1.mp4, caption: "<strong>Video 2.</strong> ..."}
+      - {src: assets/v2.mp4, caption: "<strong>Video 3.</strong> ..."}
+
+  And in the body:
+    {% include project/video-carousel.html videos=page.r4d_videos %}
+{%- endcomment -%}
+<div class="video-carousel">
+  <div class="video-carousel-container">
+    {%- for v in include.videos %}
+    <div class="video-carousel-item{% if forloop.first %} active{% endif %}">
+      <video controls width="100%">
+        <source src="{{ v.src }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      {%- if v.caption %}
+      <figcaption class="video-caption">{{ v.caption }}</figcaption>
+      {%- endif %}
+    </div>
+    {%- endfor %}
+  </div>
+  <div class="video-carousel-nav">
+    {%- for v in include.videos %}
+    <button class="carousel-dot{% if forloop.first %} active{% endif %}" data-index="{{ forloop.index0 }}"></button>
+    {%- endfor %}
+  </div>
+</div>

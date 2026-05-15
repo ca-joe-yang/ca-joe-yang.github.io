@@ -1,12 +1,1 @@
-#two_d {
-  max-width: 60%;
-}
-
-#table {
-  max-width: 60%;
-}
-
-#teaser {
-  max-width: 100%;
-}
-
+/* Per-page overrides. Empty — image max-widths handled inline via figure include's max_width param. */

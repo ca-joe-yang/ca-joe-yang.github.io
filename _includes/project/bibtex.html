@@ -1,0 +1,9 @@
+{%- comment -%}
+  Citation section. Reads `page.bibtex` (a multi-line YAML string).
+  The layout auto-includes this if page.bibtex is set; you don't need
+  to invoke it manually.
+{%- endcomment -%}
+<section class="paper-section">
+  <div class="section-title"><h1>Citation</h1></div>
+  <div class="bibtex-block"><code>{{ page.bibtex | strip }}</code></div>
+</section>

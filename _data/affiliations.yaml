@@ -1,5 +1,5 @@
 affiliation:
-  - name: Purdue Univeristy
+  - name: Purdue University
     date: 2022-Present
     logo: logos/purdue_logo.png
 
@@ -12,5 +12,5 @@ affiliation:
     logo: logos/merl_logo.png
 
   - name: NVIDIA (Research Intern)
-    date: 2025
+    date: 2025, 2026
     logo: logos/nvidia_logo.webp

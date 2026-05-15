@@ -1,0 +1,12 @@
+<div class="section-title"><h1>Affiliations</h1></div>
+<div class="affiliation-row">
+  {% for aff in site.data.affiliations.affiliation %}
+    <div class="affiliation-item">
+      {% if aff.link %}<a href="{{ aff.link }}">{% endif %}
+        <img src="/{{ aff.logo }}" alt="{{ aff.name }}">
+      {% if aff.link %}</a>{% endif %}
+      <div>{{ aff.name }}</div>
+      <div class="aff-date">{{ aff.date }}</div>
+    </div>
+  {% endfor %}
+</div>

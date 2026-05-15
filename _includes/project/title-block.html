@@ -1,0 +1,90 @@
+{%- comment -%}
+  Title block: title, subtitle, authors, affiliations, venue, links, TLDR.
+  All inputs come from the page's front matter.
+{%- endcomment -%}
+
+<section class="paper-section">
+  {%- if page.title %}
+    {%- if page.subtitle -%}
+      {%- assign _title_size = page.title_size | default: 48 -%}
+    {%- else -%}
+      {%- assign _title_size = page.title_size | default: 40 -%}
+    {%- endif %}
+    <span class="title" style="font-size:{{ _title_size }}px">{{ page.title }}{% if page.subtitle %}:{% endif %}</span>
+  {%- endif %}
+  {%- if page.subtitle %}
+    <br>
+    <span class="title">{{ page.subtitle }}</span>
+  {%- endif %}
+
+  {%- if page.authors %}
+    <div class="authors">
+    {%- for author in page.authors -%}
+      {%- if author.break -%}
+        </div><div class="authors">
+      {%- else -%}
+        <span><a href="{{ author.url }}">{{ author.name }}</a>{%- if author.affs.size > 0 or author.note -%}<sup>{%- if author.affs.size > 0 -%}{{ author.affs | join: ',' }}{%- endif -%}{{ author.note }}</sup>{%- endif -%}</span>
+      {%- endif -%}
+    {%- endfor -%}
+    </div>
+  {%- endif %}
+
+  {%- if page.affiliations %}
+    {%- assign aff_count = page.affiliations | size -%}
+    <div class="affiliations">
+      {%- for aff in page.affiliations %}
+        <div class="affiliation-item">
+          {%- if aff.logo %}<img src="/logos/{{ aff.logo }}" alt="{{ aff.short }}" class="affiliation-logo">{% endif %}
+          <span style="font-size:20px">{% if aff_count > 1 %}<sup>{{ forloop.index }}</sup>{% endif %}{{ aff.short }}</span>
+        </div>
+      {%- endfor %}
+      {%- if page.notes %}
+        {%- for note in page.notes %}
+          <div style="margin-top: 0.5em;">
+            <span style="font-size:16px"><sup>{{ note[0] }}</sup>{{ note[1] }}</span>
+          </div>
+        {%- endfor %}
+      {%- endif %}
+    </div>
+  {%- endif %}
+
+  {%- if page.venue %}
+    <div class="venue">
+      <span style="font-size:30px">{{ page.venue }}</span>
+    </div>
+  {%- endif %}
+
+  {%- if page.links %}
+    <div class="button-group">
+      {%- for link in page.links %}
+        <a href="{{ link.url }}" target="_blank" class="btn {{ link.kind }}-btn" aria-label="{{ link.label | default: link.kind }}">
+          {%- case link.kind -%}
+            {%- when 'arxiv'       %}<i class="fas fa-file-alt"></i>  <span>{{ link.label | default: 'arXiv' }}</span>
+            {%- when 'paper'       %}<i class="fas fa-file-alt"></i>  <span>{{ link.label | default: 'Paper' }}</span>
+            {%- when 'pdf'         %}<i class="fas fa-file-pdf"></i>  <span>{{ link.label | default: 'PDF' }}</span>
+            {%- when 'github'      %}<i class="fab fa-github"></i>    <span>{{ link.label | default: 'GitHub' }}</span>
+            {%- when 'code'        %}<i class="fab fa-github"></i>    <span>{{ link.label | default: 'Code' }}</span>
+            {%- when 'twitter'     %}<i class="fab fa-x-twitter"></i> <span>{{ link.label | default: 'Post' }}</span>
+            {%- when 'huggingface' %}<i class="fas fa-database"></i>  <span>{{ link.label | default: 'Hugging Face' }}</span>
+            {%- when 'video'       %}<i class="fab fa-youtube"></i>   <span>{{ link.label | default: 'Video' }}</span>
+            {%- when 'project'     %}<i class="fas fa-globe"></i>     <span>{{ link.label | default: 'Project' }}</span>
+            {%- else                %}<span>{{ link.label | default: link.kind }}</span>
+          {%- endcase -%}
+        </a>
+      {%- endfor %}
+    </div>
+  {%- endif %}
+
+  {%- if page.tldr %}
+    <div class="tldr-block">
+      <div class="tldr-title">TLDR</div>
+      <div class="tldr-content">
+        <ol>
+          {%- for item in page.tldr %}
+            <li>{{ item }}</li>
+          {%- endfor %}
+        </ol>
+      </div>
+    </div>
+  {%- endif %}
+</section>

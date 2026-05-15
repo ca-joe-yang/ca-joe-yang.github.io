@@ -1,0 +1,15 @@
+{%- comment -%}
+  A single captioned video.
+  Params: src (required), caption, max_width (e.g. "900px")
+{%- endcomment -%}
+<div class="figure-block">
+  <figure>
+    <video controls width="100%"{% if include.max_width %} style="max-width: {{ include.max_width }};"{% endif %}>
+      <source src="{{ include.src }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    {%- if include.caption %}
+    <figcaption>{{ include.caption }}</figcaption>
+    {%- endif %}
+  </figure>
+</div>

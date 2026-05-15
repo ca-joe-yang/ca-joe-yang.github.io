@@ -1,9 +1,27 @@
 name: Chiao-An Yang
-# twitter: "https://twitter.com/"
 gscholar: "https://scholar.google.com/citations?user=f1fIHBYAAAAJ&hl=zh-TW&oi=sra"
 github: "https://github.com/ca-joe-yang"
 orcid: "https://orcid.org/my-orcid?orcid=0000-0003-1947-1331"
 email: "yang2300@purdue.edu"
-bio: <p>I am a third-year PhD student in Purdue University studying for a computer science degree. My advisor is  Prof. <a href="https://raymond-yeh.com/">Raymond A. Yeh</a>.</p> <p>I received my Bachelor's and Master's degree, advised by Prof. <a href="https://scholar.google.com/citations?user=uSS3FwQAAAAJ&hl=zh-TW">Yung-Yu Chuang</a>, in National Taiwan University. I later worked as Research Assistant for Prof. <a href="https://vllab.ee.ntu.edu.tw/ycwang.html">Yu-Chiang Frank Wang</a> in <a href="https://vllab.ee.ntu.edu.tw/">VLLab</a> for two years</p>.
-# My research interest is machine learning,  especially computer vision, equivariant, and machine learning for scientific discovery. I am working with Professor Raymond A. Yeh.
-# Please feel free to send me an anonymous message by clicking the box I've included below.
+# twitter: "https://twitter.com/"
+# cv: "/resource/cv.pdf"
+
+bio: |
+  <p>
+    I am a PhD student at <b>Purdue University</b>, advised by Prof.
+    <a href="https://raymond-yeh.com/">Raymond A. Yeh</a>.
+    My research is in computer vision and machine learning, with a current focus on
+    <b>post-training adaptation methods</b> and
+    <b>vision-language understanding</b>
+  </p>
+  <p>
+    I am fortunate to have interned at
+    <a href="https://research.nvidia.com/">NVIDIA Research</a> (2025) and
+    <a href="https://www.merl.com/">MERL</a> (2024).
+    I received my Bachelor's and Master's degrees from
+    <a href="https://www.ntu.edu.tw/english/">National Taiwan University</a>, advised by Prof.
+    <a href="https://scholar.google.com/citations?user=uSS3FwQAAAAJ&hl=zh-TW">Yung-Yu Chuang</a>,
+    and subsequently worked as a Research Assistant in
+    <a href="https://vllab.ee.ntu.edu.tw/">VLLab</a> with Prof.
+    <a href="https://vllab.ee.ntu.edu.tw/ycwang.html">Yu-Chiang Frank Wang</a>.
+  </p>

@@ -1,0 +1,13 @@
+{%- comment -%}
+  Opens a paper-section card with a section title heading.
+  Pair with `{% include project/section-end.html %}`.
+
+  Usage:
+    {% include project/section.html title="Abstract" %}
+      <p>...body...</p>
+    {% include project/section-end.html %}
+{%- endcomment -%}
+<section class="paper-section">
+  {%- if include.title %}
+    <div class="section-title"><h1>{{ include.title }}</h1></div>
+  {%- endif %}
